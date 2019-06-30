@@ -7,5 +7,5 @@ fields:
   config:
     required: false
   label: Block
-  default: block/content
+  default: content
   hidden: true
