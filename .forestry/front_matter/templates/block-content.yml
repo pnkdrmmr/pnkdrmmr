@@ -1,4 +1,11 @@
 ---
 label: Block - Content
 hide_body: true
-fields: []
+fields:
+- name: block
+  type: text
+  config:
+    required: false
+  label: Block
+  default: block/content
+  hidden: true
