@@ -1,6 +1,5 @@
 ---
 blocks: []
-published: false
 
 ---
 Testing
