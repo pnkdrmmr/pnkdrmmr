@@ -14,7 +14,19 @@ blocks:
   set_height: false
   height_desktop: 
   height_mobile: 
-  image: []
+  image:
+  - main_image: "/uploads/2018/12/07/compass.jpg"
+    mobile_image: ''
+    title: Your Title Here!
+    text: Et harum quidem rerum facilis est et expedita distinctio. Esse cillum dolore
+      eu fugiat nulla pariatur.
+    custom_button_url: ''
+    text_color: "#FFFFFF"
+    overlay_color: "#000000"
+    opacity: '25'
+    button_text: ''
+    button_url: ''
+    custom_css: ''
 
 ---
 What happens here
