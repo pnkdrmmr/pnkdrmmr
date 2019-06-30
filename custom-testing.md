@@ -1,14 +1,13 @@
 ---
 title: Custom Testing
-date: 
+date: 2019-06-26 00:00:00 -0500
 banner_image: ''
 heading: Testing 1
 sub_heading: Testing 2
 layout: landing-page
 textline: asdfasdfasdfasdfasdf
-publish_date: 
+publish_date: 2019-06-27 00:00:00 -0500
 show_staff: false
-published: false
 
 ---
 What happens here
