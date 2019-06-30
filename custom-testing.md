@@ -8,6 +8,13 @@ layout: landing-page
 textline: asdfasdfasdfasdfasdf
 publish_date: 2019-06-27 00:00:00 -0500
 show_staff: false
+blocks:
+- template: slider
+  block: slider
+  set_height: false
+  height_desktop: 
+  height_mobile: 
+  image: []
 
 ---
-What happens here![](/uploads/2018/12/07/compass.jpg)
+What happens here
