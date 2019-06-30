@@ -1,4 +1,124 @@
 ---
 label: Slider
 hide_body: true
-fields: []
+fields:
+- name: block
+  type: text
+  config:
+    required: false
+  label: Block
+  hidden: true
+  default: slider
+- name: set_height
+  type: boolean
+  label: Set Height
+- name: height_desktop
+  type: number
+  label: Height (desktop)
+  description: Only when "Set Height" is on.
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+- name: height_mobile
+  type: number
+  description: Ignored if left blank. Set Height must be on.
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+  label: Height (mobile - optional)
+- name: image
+  type: field_group_list
+  fields:
+  - name: main_image
+    type: file
+    config:
+      maxSize: 250
+    label: Main Image
+  - name: mobile_image
+    type: file
+    config:
+      maxSize: 250
+    label: Mobile Image (optional)
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+    default: Your Title Here!
+  - name: text
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Text
+  - name: button_text
+    type: text
+    config:
+      required: false
+    label: Button Text
+    default: Et harum quidem rerum facilis est et expedita distinctio. Esse cillum
+      dolore eu fugiat nulla pariatur.
+  - name: button_url
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: simple
+        section: ''
+        file: 
+        path: 
+    label: Button Url
+  - name: custom_button_url
+    type: text
+    config:
+      required: false
+    label: Custom Button Url
+  - name: custom_css
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Custom CSS
+  - name: text_color
+    type: color
+    label: Text Color
+    config:
+      required: false
+      color_format: Hex
+    default: "#FFFFFF"
+  - name: overlay_color
+    type: color
+    label: Overlay Color
+    config:
+      required: false
+      color_format: Hex
+    default: "#000000"
+  - name: opacity
+    type: number
+    label: Opacity
+    description: Number 0-100
+    default: 0
+    required: true
+    config:
+      min: '1'
+      max: '100'
+      step: '1'
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Image
