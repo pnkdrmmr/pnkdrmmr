@@ -1,16 +1,11 @@
 ---
 title: Custom Testing
 date: 2019-06-26 00:00:00 -0500
-banner_image: ''
-heading: Testing 1
-sub_heading: Testing 2
-layout: landing-page
-textline: asdfasdfasdfasdfasdf
+layout: custom-page
 publish_date: 2019-06-27 00:00:00 -0500
-show_staff: false
 blocks:
 - template: slider
-  block: slider
+  block: blocks/slider
   set_height: false
   height_desktop: 
   height_mobile: 

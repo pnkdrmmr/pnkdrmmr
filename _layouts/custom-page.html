@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+{% for block in page.blocks %}
+	{% include {{ block.block }}.html %}
+{% endfor %}
