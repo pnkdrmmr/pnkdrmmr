@@ -15,6 +15,7 @@ sections:
   label: Pages
   create: all
   templates:
+  - custom-page
   - landing-page
   - page
 - type: document
