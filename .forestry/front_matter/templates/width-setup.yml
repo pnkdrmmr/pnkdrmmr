@@ -2,27 +2,27 @@
 label: Width Setup
 hide_body: true
 fields:
+- name: hide_large
+  type: boolean
+  label: Hide Large
 - name: large_width
   type: include
   config: {}
   template: width-creator
   label: Large Width
-- name: hide_large
+- name: hide_medium
   type: boolean
-  label: Hide Large
+  label: Hide Medium
 - name: medium_width
   type: include
   config: {}
   template: width-creator
   label: Medium Width
-- name: hide_medium
+- name: hide_small
   type: boolean
-  label: Hide Medium
+  label: Hide Small
 - name: small_width
   type: include
   config: {}
   template: width-creator
   label: Small Width
-- name: hide_small
-  type: boolean
-  label: Hide Small
