@@ -1,43 +1,49 @@
-<!-- includes/cta -->
-{% assign block_id = '' %}
-{% capture cssClass %}.{{blk}}{% endcapture %}
-{% capture bdyClass %}{{bdyClass}}{% endcapture %}
-<section 
-	class="slides {{ block_id }}">
+{% assign s = section %}
+{% capture class %}{{s.template}}-{{forloop.index}}{% endcapture %}
+{% capture sectionID %}section-{{class}}{% endcapture %}
+<!-- includes/{{s.block}} -->
+{% assign imgs 		= s.slices %}
+{% assign allBgs 	= '' %}
+<div 
+	class="slides {{class}}" id="{{sectionID}}">
 	<div class="grid_no_gutter ">
-		{% for item in section.block_items %}
+		{% for img in imgs %}
 			{% capture sld_Num %}slide-{{forloop.index}}{% endcapture %}
 			{% case forloop.index %}
 				{% when 1 %}{% assign width = 'large-up--six-twelfths' %}
 				{% when 2 %}{% assign width = 'medium--one-half large-up--five-twelfths' %}
 				{% when 3 %}{% assign width = 'medium--one-half large-up--four-twelfths' %}
 			{% endcase %}
+			{% comment %} Capture url {% endcomment %}
+			{% assign url = '' %}{% if img.url != blank %}{% assign url = img.url %}{% elsif img.custom_url != blank %}{% assign url = img.custom_url %}{% endif %}
+			{% comment %} Set Element type and attr {% endcomment %}
+			{% assign el = 'div' %}{% assign attr = '' %}{% if url != blank %}{% assign el = 'a' %}{% capture attr %} href="{{url}}" {% endcapture %}{% endif %}
 			<div class="grid__item {{width}}">
-				{% assign url = item.url %}
-				{% include url_shortener.html url=url %}
-				<a href="{{url}}" class=" background-image {{sld_Num}}">
+				<{{el}} {{attr}} class=" background-image {{sld_Num}}">
 					<div class="info">
-						<h2>{{item.title}}</h2>
-						{% if item.text %}
+						<h2>{{img.title}}</h2>
+						{% if img.text %}
 							<div class="text-slide">
-								<span>{{item.text}}</span>
+								<span>{{img.text}}</span>
 							</div>
 						{% endif %}
 					</div>
-				</a>
+				</{{el}}>
 			</div>
+			{% capture bgImg %}
+			.{{sld_Num}}::before {
+				background-image: url({{img.image}});
+			}
+			{% endcapture %}
+			{% assign allBgs = allBgs | append: bgImg %}
 		{% endfor %}
 	</div>
 	<style type="text/css">
-		{% for item in section.block_items %}
-		{% capture sld_Num %}slide-{{forloop.index}}{% endcapture %}
-		.{{sld_Num}}::before {
-			background-image: url({{item.image}});
-		}
-		{% endfor %}
+		{{allBgs}}
 		{% assign custom = section.html | raw %}
-		{% assign cssLoop = custom | replace: '==', cssClass | replace: '++', bdyClass | replace: ';', ' !important;' %}
+		{% assign cssClass = class | prepend: '.' %}
+		{% assign cssLoop = custom | replace: '==', cssClass | replace: ';', ' !important;' %}
 		{{cssLoop}}
 	</style>
-</section>
+</div>
 

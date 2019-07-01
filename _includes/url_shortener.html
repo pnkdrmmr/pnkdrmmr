@@ -1,0 +1,4 @@
+{% assign url = url | replace: '.md','' | prepend: '/' %}
+{% if url contains '_post'  %}
+	{% assign url =  url | replace: '_', '' %}
+{% endif %}
