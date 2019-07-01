@@ -15,6 +15,7 @@ fields:
   template_types:
   - slider
   - block-content
+  - block-slices
   config:
     min: 
     max: 
