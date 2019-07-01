@@ -8,7 +8,7 @@ fields:
 - name: large_width
   type: include
   config: {}
-  template: width-creator
+  template: large-width
   label: Large Width
 - name: hide_medium
   type: boolean
@@ -16,7 +16,7 @@ fields:
 - name: medium_width
   type: include
   config: {}
-  template: width-creator
+  template: medium-width
   label: Medium Width
 - name: hide_small
   type: boolean
@@ -24,5 +24,5 @@ fields:
 - name: small_width
   type: include
   config: {}
-  template: width-creator
+  template: small-width
   label: Small Width
