@@ -4,6 +4,9 @@
 <!-- includes/{{s.block}} -->
 {% assign imgs 		= s.slices %}
 {% assign allBgs 	= '' %}
+{% assign custom 	= s.custom_css | raw %}
+{% assign cssClass	= class | prepend: '.' %}
+{% assign cssLoop 	= custom | replace: '==', cssClass | replace: ';', ' !important;' %}
 <div 
 	class="slides {{class}}" id="{{sectionID}}">
 	<div class="grid_no_gutter ">
@@ -40,9 +43,7 @@
 	</div>
 	<style type="text/css">
 		{{allBgs}}
-		{% assign custom = section.html | raw %}
-		{% assign cssClass = class | prepend: '.' %}
-		{% assign cssLoop = custom | replace: '==', cssClass | replace: ';', ' !important;' %}
+		
 		{{cssLoop}}
 	</style>
 </div>
