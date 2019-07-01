@@ -17,7 +17,6 @@ sections:
   templates:
   - custom-page
   - landing-page
-  - page
 - type: document
   path: _data/information.yml
   label: Contact Information
