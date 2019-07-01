@@ -1,14 +1,32 @@
 ---
 title: Custom Testing
-date: 2019-06-26 00:00:00 -0500
+date: 2019-06-26T05:00:00.000+00:00
 banner_image: ''
 heading: Testing 1
 sub_heading: Testing 2
 layout: custom-page
 textline: asdfasdfasdfasdfasdf
-publish_date: 2019-06-27 00:00:00 -0500
+publish_date: 2019-06-27T05:00:00.000+00:00
 show_staff: false
 blocks:
+- template: block-slices
+  block: blocks/slices
+  slices:
+  - image: ''
+    title: Livin on a Prayer
+    text: We'll make it I swear
+    url: []
+    custom_url: ''
+  - image: "/uploads/2018/02/17/bridge.jpg"
+    title: What it do
+    text: What it say
+    url: []
+    custom_url: ''
+  - image: "/uploads/2018/02/17/city.jpg"
+    title: Rollin
+    text: What?
+    url: []
+    custom_url: ''
 - template: slider
   block: blocks/slider
   set_height: false
