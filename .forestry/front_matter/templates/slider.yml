@@ -8,7 +8,7 @@ fields:
     required: false
   label: Block
   hidden: true
-  default: slider
+  default: blocks/slider
 - name: set_height
   type: boolean
   label: Set Height
