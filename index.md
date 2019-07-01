@@ -53,9 +53,9 @@ blocks:
   - main_image: "/uploads/2018/12/07/compass.jpg"
     mobile_image: ''
     title: Your Title Here!
-    text: ''
-    button_text: Et harum quidem rerum facilis est et expedita distinctio. Esse cillum
-      dolore eu fugiat nulla pariatur.
+    text: Et harum quidem rerum facilis est et expedita distinctio. Esse cillum dolore
+      eu fugiat nulla pariatur.
+    button_text: ''
     custom_button_url: ''
     custom_css: ''
     text_color: "#FFFFFF"
