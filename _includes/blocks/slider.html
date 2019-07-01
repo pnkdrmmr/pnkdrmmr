@@ -1,4 +1,3 @@
-
 {% assign s = section %}
 {% capture class %}{{s.template}}-{{forloop.index}}{% endcapture %}
 {% capture sectionID %}section-{{class}}{% endcapture %}
@@ -6,31 +5,99 @@
 
 {% comment %}<div>{{s}}</div>{% endcomment %}
 
-
-
 {% assign imgs 		= s.image %}
 {% assign set_hght 	= s.set_height %}
 {% assign hght_desk = s.height_desktop %}
 {% assign hght_mob 	= s.height_mobile %}
 
+{% assign loop = 0 %}
+{% assign sliderCSS = '' %}
+
 <div class="slider {{class}}" id="{{sectionID}}">
 	{% for img in imgs %}
+		{% assign slideCSS = '' %}
+		{% assign loop = loop | plus: 1 %}
+		{% capture slideClass %}slide-{{loop}}{% endcapture %}
+		{% capture cssClass %}.{{class}} .{{slideClass}}{% endcapture %}
+		{% comment %} Images {% endcomment %}
 		{% assign main_img 	= img.main_image %}
-		{% assign mob_img 	= img.mob_image %}
-		{% assign ttl 		= img.title %}
-		{% assign txt 		= img.text %}
-		{% assign btn_txt 	= img.button_text %}
-		{% assign btn_url 	= img.button_url %}
-		{% assign cust_url	= img.custom_button_url %}
+		{% assign mob_img = '' %}{% if img.mob_image %}{% assign mob_img = img.mob_image %}{% endif %}
+		{% comment %} Title / Text {% endcomment %}
+		{% assign ttl = '' %}{% if img.title != '' %}{% assign ttl = img.title %}{% endif %}
+		{% assign txt = '' %}{% if img.text != '' %}{% assign txt = img.text %}{% endif %}
+		{% comment %} Button {% endcomment %}
+		{% assign btn_txt = '' %}{% if img.button_text != '' %}{% assign btn_txt = img.button_text %}{% endif %}
+		{% assign btn_url = '' %}{% if img.button_text != '' %}{% assign btn_url = img.button_url %}{% endif %}{% if img.custom_button_url != '' %}{% assign btn_url = img.custom_button_url %}{% endif %}
+		{% assign btn = false %}{% if btn_txt != '' and btn_url != blank %}{% assign btn = true %}{% endif %}
+		{% comment %} Colors {% endcomment %}
 		{% assign txt_clr	= img.text_color %}
-		{% assign op		= img.opacity | time: 0.01 %}
 		{% assign bg_clr	= img.overlay_color %}
+		{% assign op		= img.opacity | times: 0.01 %}
+		{% comment %} Start CSS {% endcomment %}
+		{% capture startCSS %}
+			/* Slide #{{loop}} */
+			/* ======================== */
+			{{cssClass}} h2, 
+			{{cssClass}} .rte,
+			{{cssClass}} .rte * {
+				color: {{txt_clr}};
+			}
+			{{cssClass}}::before {
+				background: {{bg_clr}};
+				opacity: {{op}};
+			}
+		{% endcapture %}
+		{% assign slideCSS = slideCSS | append: startCSS %}
 
-		<div class="slide slide-{{forloop.index}}">
-			<img src="{{main_img}}">
+		{% comment %} Capture Image Setups {% endcomment %}
+		{% assign inlineImgs = '' %}
+		{% if set_hght == false %}
+			{% capture inlineImgs %}
+				<img class="{% if mob_img != '' %}small--hide{% endif %}" src="{{main_img}}" />
+				{% if mob_img != '' %}<img class="medium-up--hide" src="{{mob_img}}" />{% endif %}
+			{% endcapture %}
+		{% else %}
+			{% capture bgImgCSS %}
+				{{cssClass}} {
+					background-image: url({{main_image}});
+				}
+				{% if mob_img != '' %}
+				@media screen and (max-width: 750px) {
+					{{cssClass}} {
+						background-image: url({{mob_image}});
+					}
+				}
+				{% endif %}
+			{% endcapture %}
+			{% assign slideCSS = slideCSS | append: bgImgCSS %}
+		{% endif %}
+
+
+		<div class="slide {{slideClass}} background-image">
+			
+			{{inlineImgs}}
+			
+			{% if txt != '' or ttl != '' or btn != false %}
+				<div class="center-content">
+					{% if ttl != blank %}
+						<h2>{{ttl}}</h2>
+					{% endif %}
+					{% if txt != blank %}
+						<div class="rte">{{txt}}</div>
+					{% endif %}
+					{% if btn == true %}
+						<a class="btn" href="{{btn_url}}">{{btn_txt}}</a>
+					{% endif %}
+				</div>
+			{% endif %}
 
 		</div>
+		{% assign sliderCSS = sliderCSS | append: slideCSS %}
 	{% endfor %}
 </div>
+<style type="text/css">
+	{{sliderCSS}}
+</style>
+
 
 
