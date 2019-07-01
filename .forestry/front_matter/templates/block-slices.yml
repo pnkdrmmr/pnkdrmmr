@@ -1,4 +1,46 @@
 ---
 label: Block - Slices
 hide_body: true
-fields: []
+fields:
+- name: block
+  type: text
+  config:
+    required: false
+  label: Block
+  default: blocks/slices
+  hidden: true
+- name: slices
+  type: field_group_list
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 250
+    label: Image
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: url
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: pages
+        section: 
+        file: 
+        path: 
+    label: Url
+  - name: custom_url
+    type: text
+    config:
+      required: false
+    label: Custom Url
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Slices
