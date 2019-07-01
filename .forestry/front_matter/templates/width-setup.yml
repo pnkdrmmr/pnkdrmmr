@@ -7,13 +7,22 @@ fields:
   config: {}
   template: width-creator
   label: Large Width
+- name: hide_large
+  type: boolean
+  label: Hide Large
 - name: medium_width
   type: include
   config: {}
   template: width-creator
   label: Medium Width
+- name: hide_medium
+  type: boolean
+  label: Hide Medium
 - name: small_width
   type: include
   config: {}
   template: width-creator
   label: Small Width
+- name: hide_small
+  type: boolean
+  label: Hide Small
