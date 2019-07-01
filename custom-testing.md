@@ -58,6 +58,12 @@ blocks:
     custom_css: ''
 - template: block-content
   block: blocks/content
+  hide_large: false
+  large-width: 50% (1/2)
+  hide_medium: false
+  medium-width: 66% (2/3)
+  hide_small: false
+  small-width: ''
 
 ---
 What happens here.

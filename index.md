@@ -26,8 +26,8 @@ hero_button:
   href: "/about"
 show_news: true
 show_staff: false
-publish_date: 2019-07-01 03:48:43 +0000
-date: 2019-06-30 05:00:00 +0000
+publish_date: 2019-07-01T03:48:43.000+00:00
+date: 2019-06-30T05:00:00.000+00:00
 blocks:
 - template: block-slices
   block: blocks/slices
@@ -47,6 +47,24 @@ blocks:
     text: Planetary Intergalactic
     url: []
     custom_url: ''
+- template: slider
+  block: blocks/slider
+  image:
+  - main_image: "/uploads/2018/12/07/compass.jpg"
+    mobile_image: ''
+    title: Your Title Here!
+    text: Et harum quidem rerum facilis est et expedita distinctio. Esse cillum dolore
+      eu fugiat nulla pariatur.
+    button_text: ''
+    custom_button_url: ''
+    custom_css: ''
+    text_color: "#FFFFFF"
+    overlay_color: "#000000"
+    opacity: "66"
+    button_url: ''
+  set_height: false
+  height_desktop: ''
+  height_mobile: ''
 menu:
   navigation:
     identifier: _index
