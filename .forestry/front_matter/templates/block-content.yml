@@ -9,3 +9,8 @@ fields:
   label: Block
   default: blocks/content
   hidden: true
+- name: widths
+  type: include
+  config: {}
+  template: width-setup
+  label: Widths
