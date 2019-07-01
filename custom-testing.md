@@ -60,4 +60,4 @@ blocks:
   block: blocks/content
 
 ---
-What happens here
+What happens here.
