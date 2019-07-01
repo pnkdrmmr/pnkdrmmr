@@ -1,0 +1,54 @@
+// .text-grid.hero {
+
+// 	padding:120px 0;
+
+// 	.grid_no_gutter {
+// 		margin-bottom: -60px;
+// 		.grid__item {
+// 			margin-bottom: 60px;
+// 		}
+// 	}
+
+
+// 	.grid_no_gutter,
+// 	.grid__item  {
+// 		height: auto;
+// 		// vertical-align: top;
+// 	}
+// 	.container {
+// 		display: flex;
+// 		align-items: center;
+// 	}
+
+// 	.item {
+// 		position: relative;
+// 		width:90%;
+// 		max-width: 300px;
+// 		margin: 0 auto;
+// 		img {
+// 			margin: 0 auto 2em;
+// 		}
+
+// 		h2 {
+// 			font-size: 1.56em;
+// 			text-transform: uppercase;
+// 			margin: 0 auto 1.5em;
+// 			position: relative;
+// 			letter-spacing: 0.06em;
+// 			&:after {
+// 				content: ''; 
+// 				position: absolute;
+// 				bottom: -15px;
+// 				left:50%;
+// 				transform: translateX(-50%);
+// 				width: 100%;
+// 				max-width: 160px;
+// 				border-bottom: 3px solid black;
+// 				border-bottom-color: currentColor;
+// 			}
+// 		}
+
+// 	}
+
+
+// }

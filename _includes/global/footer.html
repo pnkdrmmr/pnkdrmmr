@@ -1,37 +1,71 @@
-<!-- includes/global/footer -->
-<footer class="site-footer">
-	<div class="container pure-g">
-        <div class="footer-col pure-u-1 pure-u-md-1-4">
-            <img src="{{ "/img/logo-white.png" | absolute_url }}" alt="" class="footer-logo">
+<!-- includes/footer -->
+<footer class="footer">
+
+    <div class="container ">
+        <div class="grid">
+            <div class="grid__item medium-up--one-half">
+                <h3 class="footer-title large">Start working on a new project?</h3>
+                <a class="btn" href="/contact">Let's Get Started</a>
+            </div>
+            <div class="grid__item medium-up--one-quarter">
+                <h3 class="footer-title">Connect With Me</h3>
+                <ul class="social-nav">
+                    {%- assign social_nav = 'Facebook,Instagram,Youtube' | split: ',' -%}
+                    {% for soc in social_nav %}
+                        {% capture icn %}icons/icon-{{-soc|strip|downcase|handlize-}}.liquid{% endcapture %}
+                        <li>
+                            <a href="https://{{soc}}.com/pnkdrmmmr" target="_blank">
+                                <span class="visually-hidden">{{soc}}</span>
+                                {% include {{icn}} %}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="grid__item medium-up--one-quarter">
+                <h3 class="footer-title">Instagram</h3>
+                <div class="grid margin">
+                    {% for i in (1..6) %}
+                        <div class="grid__item one-half medium-up--one-third">
+                            <div class="bg_image insta-{{forloop.index}}"></div>
+                        </div>
+                    {% endfor %}
+                    <style type="text/css">
+                        {% for i in (1..6) %}
+                            {% capture cycle %}{% cycle 'man', 'woman', 'bird', 'bike', 'mountain', 'art' %}{% endcapture %}
+                            {% capture rando %}https://picsum.photos/300/300/?{{cycle}}{% endcapture %}
+                            .insta-{{forloop.index}} {
+                                background-image: url({{ rando }});
+                            }
+                        {% endfor %}
+                    </style>
+                </div>
+            </div>
+            <div class="grid__item medium-up--one-half align-middle ">
+                <ul class="footer-links">           
+                    {% for item in site.menus.navigation %}
+                        {% assign page_url = page.url | replace: '.html','' %}
+                        <li class="nav-item {% if page_url == item.url %}active{% endif %}">
+                            <a href="{{ item.url }}">{{ item.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="grid__item medium-up--one-half align-middle medium-up--text-right">
+                <span>© {{ 'now' | date: '%Y' }} {{ site.title | upcase }}. All Rights Reserved</span>
+            </div>
         </div>
-        <div class="footer-col pure-u-1 pure-u-md-1-4">
-            <h3>About {{ site.short_title }}</h3>
-            <ul>
-            {% for item in site.menus.footer %}
-                <li><a href="{{ item.url | absolute_url }}">{{ item.title }}</a></li>
-            {% endfor %}
-            </ul>
-        </div>
-        <div class="footer-col pure-u-1 pure-u-md-1-4">
-            <h3>Projects</h3>
-            <ul>
-            {% for project in site.projects limit:5 %}
-                <li><a href="{{ project.url | absolute_url }}">{{ project.title }}</a></li>
-            {% endfor %}
-            {% if site.projects | size > 5 %}
-                <li><a href="{{ "/projects/" | absolute_url }}">See all projects</a></li>
-            {% endif %}
-            </ul>
-        </div>
-        <div class="footer-col pure-u-1 pure-u-md-1-4">
-            <h3>Contact</h3>
-            {% include address.html %}
-        </div>
-	</div>
-	<div class="copyright">
-        <p>
-            &copy;{{ 'now' | date: "%Y" }} {{ site.title }} - All Rights Reserved<br>
-			<a href="{{ "/admin" | absolute_url }}">Site Admin</a>
-		</p>
-	</div>
+    </div>
+
+    
+
+    <script type="text/javascript">
+        // console.log('turn footer back on')
+        
+
+
+
+    </script>
+
+    
 </footer>

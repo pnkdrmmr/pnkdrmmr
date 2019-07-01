@@ -1,52 +1,60 @@
 <!-- includes/global/nav -->
 
-{% comment %}
-	Displays the site's navigation using the jekyll-menus plugin
-{% endcomment %}
-
-{% assign url = page.url | remove:'index.html' %}
-
-<header class="site-header">
-  <div class="container">
-      <h1 class="logo">
-        <a href="{{ "/" | absolute_url }}">{{ site.name }}</a>
-      </h1>
-      <nav class="main-nav">
-        <ul class="navigation">
-          {% for link in site.menus.navigation %}
-          <li class="{% if link.children %}nested {% endif %}{% if url == link.url %}current{% endif %}">
-            {% if link.children %}
-            <ul class="first-level">
-              {% for child in link.children %}
-              <li>
-                {% if child.children %}
-                <ul class="second-level">
-                  {% for child in child.children %}
-                  <li>
-                    <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>
-                  </li>
-                  {% endfor %}
-                </ul>
-                {% endif %}
-                <a href="{{ child.url | absolute_url }}"{% if child.target %} target="_blank" {% endif %}>
-                  {{ child.title }}
-                  {% if child.childen %}
-                    <i class='icon-right-dir-2'></i>
-                  {% endif %}
-                </a>
-              </li>
-              {% endfor %}
-            </ul>
+<!-- includes/header -->
+<header class="main-header">
+    <div class="overlay-bg close-menu"></div>
+    <div class="menu-panel">
+    <a href="/" class="logo">
+        {% assign ttl_splt = site.title | split: '' %}
+        {% for i in ttl_splt %}
+            {% if i != '' %}
+                <span>{{i}}</span>
             {% endif %}
-            <a href="{{ link.url | absolute_url }}"{% if link.target %} target="_blank" {% endif %}>
-                  {{ link.title }}
-                  {% if link.childen %}
-                    <i class='icon-chevron-down'></i>
-                  {% endif %}
-                </a>
-          </li>
-          {% endfor %}
+        {% endfor %}
+    </a>
+    <span class="open menu-toggle">
+      <span class="visually-hidden">Open Menu</span>
+      {% include icons/menu-open.liquid %}
+    </span>
+        <ul class="main-nav">
+                      {% comment %}for link in site.menus.navigation{% endcomment %}
+                      {% comment %}site.data.menus.main{% endcomment %}
+                      {% comment %}site.menus.navigation{% endcomment %}
+            {% for item in site.menus.navigation %}
+                {% assign page_url = page.url | replace: '.html','' %}
+                <li>
+                    <a 
+                        href="{{ item.url }}" 
+                        class="nav-item {% if page_url == item.url %}active{% endif %}">
+                        {{ item.title }}
+                    </a>
+                </li>
+            {% endfor %}
         </ul>
-    </nav>
-  </div>
+        <ul class="social-nav">
+            {% assign social_nav = 'facebook, instagram, youtube' | split: ',' %}
+            {% for soc in social_nav %}
+                <li>
+                    <a href="https://{{soc}}.com/pnkdrmmmr">{{soc}}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <script type="text/javascript">
+           // console.log('Turn Nav back on')
+           
+        </script>
+    </div>
 </header>
+{% comment %}{% if page_url != '/' and include.spacer != 'none' %}
+    <div 
+        style="height:108px;" 
+        class="spacer"></div>
+{% endif %}{% endcomment %}
+
+
+
+
+
+
+
+

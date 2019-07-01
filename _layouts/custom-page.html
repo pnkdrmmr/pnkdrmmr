@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-
-{% for section in page.blocks %}
-	{% include {{ section.block }}.html %}
-{% endfor %}
+<!-- layouts/{{page.layout}} -->
+<div class="">
+	{% for section in page.blocks %}
+		{% include {{ section.block }}.html %}
+	{% endfor %}
+</div>

@@ -1,8 +1,7 @@
-title: Belkirk College of Engineering
-short_title: Belkirk
-description: Belkirk Demo Site for Forestry.io
-baseurl:
+title: pd
+baseurl: '/'
 permalink: "/:path/"
+url: "pnkdrmmr.github.io" # your site's origin, e.g. https://forestry.io
 defaults:
   - scope:
       path: ""
@@ -27,6 +26,8 @@ collections:
 jekyll-archives:
   enabled: all
   layout: "archive"
+sass:
+    sass_dir: css
 plugins:
   - jekyll-menus
   - jekyll-feed

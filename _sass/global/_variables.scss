@@ -1,0 +1,244 @@
+// Colors
+// ------
+	// #00BEBD
+	// #008988
+	$green: #008988;
+	$orange: #ff9800;
+	$beige: #ffffff;
+	$white: #ffffff;
+	$dark: #000000;
+
+
+
+	$darkGrey: #535355;
+	$red: #EE5C6C;
+	$purp: #6A0D83;
+
+	$lighterGrey: lighten($darkGrey,30%);
+	$lightestGrey: lighten($darkGrey,60%);
+	$darkerGrey:darken($darkGrey,20%);
+
+	$defGrad: linear-gradient(145deg, #{$red}, #{$purp} );
+	$revGrad: linear-gradient(-45deg, #{$red}, #{$purp} );
+
+
+
+
+
+
+	// Set Extend
+	// .text-gradient > *,
+	// .text-gradient {
+	// 	background: $gCo1;
+	// 	background: -moz-linear-gradient(left, $gCo1 $gPerc1, $gCo2 $gPerc2, $gCo3 $gPerc3, $gCo4 $gPerc4, $gCo5 $gPerc5, $gCo6 $gPerc6);
+	// 	background: -webkit-gradient(left top, right top, color-stop($gPerc1, $gCo1), color-stop($gPerc2, $gCo2), color-stop($gPerc3, $gCo3), color-stop($gPerc4, $gCo4), color-stop($gPerc5, $gCo5), color-stop($gPerc6, $gCo6));
+	// 	background: -webkit-linear-gradient(left, $gCo1 $gPerc1, $gCo2 $gPerc2, $gCo3 $gPerc3, $gCo4 $gPerc4, $gCo5 $gPerc5, $gCo6 $gPerc6);
+	// 	background: -o-linear-gradient(left, $gCo1 $gPerc1, $gCo2 $gPerc2, $gCo3 $gPerc3, $gCo4 $gPerc4, $gCo5 $gPerc5, $gCo6 $gPerc6);
+	// 	background: -ms-linear-gradient(left, $gCo1 $gPerc1, $gCo2 $gPerc2, $gCo3 $gPerc3, $gCo4 $gPerc4, $gCo5 $gPerc5, $gCo6 $gPerc6);
+	// 	background: linear-gradient(to right, $gCo1 $gPerc1, $gCo2 $gPerc2, $gCo3 $gPerc3, $gCo4 $gPerc4, $gCo5 $gPerc5, $gCo6 $gPerc6);
+	// 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gCo1', endColorstr='$gCo6', GradientType=1 );
+		
+	// 	// Can be used on backgrounds too if next two lines are removed
+	// 	-webkit-background-clip: text;
+	// 	-webkit-text-fill-color: transparent;
+	// }
+
+
+	// Using Extend
+
+	// .some-thing {
+	// 	@extend .text-gradient;
+	// }
+
+	// // If you need it to undo on hover, so you can set a different color
+	// .some-thing {
+	// 	&:not(:hover) {
+	// 		@extend .text-gradient;
+	// 	}
+	// }
+
+
+
+	$bodyBG: $white;
+	$bodyTextColor: $darkGrey;
+	$borderColor: lighten($darkGrey,10%);
+
+	$linkColor:$red;
+	$linkColorHover:darken($red,25%);
+
+	$navLinkColor:$darkGrey;
+
+// Fonts
+// -----
+
+
+	
+
+	@font-face {
+	  	font-family: 'Butler';
+	  	src: url('/uploads/fonts/Butler_Regular.otf') format("opentype");
+	  	font-weight: 400;
+	}
+	@font-face {
+	  	font-family: 'Butler';
+	  	src: url('/uploads/fonts/Butler_Medium.otf') format("opentype");
+	  	font-weight: 500;
+	}
+	@font-face {
+	  	font-family: 'Butler';
+	  	src: url('/uploads/fonts/Butler_Bold.otf') format("opentype");
+	  	font-weight: 600;
+	}
+	@font-face {
+	  	font-family: 'Butler';
+	  	src: url('/uploads/fonts/Butler_Black.otf') format("opentype");
+	  	font-weight: 900;
+	}
+
+
+
+
+	$bodyFont:"neuzeit-grotesk", sans-serif;
+	$headlineFont:"Butler", serif;
+	$bodyLineHeight:1.3;
+	$bodyFontSize:1em;
+
+
+// Grid
+// ----
+	$grid-small: 400px;
+	$grid-medium: 767px;
+	$grid-large: 992px;
+	$grid-ex-large: 1200px;
+	$grid-widescreen: 1400px;
+	$grid-gutter: 30px;
+
+	$narrow: 'narrow';
+	$small: 'small';
+	$medium: 'medium';
+	$medium-down: 'medium-down';
+	$medium-up: 'medium-up';
+	$large: 'large';
+	$large-down: 'large-down';
+	$large-up: 'large-up';
+	$ex-large: 'ex-large';
+	$widescreen: 'widescreen';
+
+
+	// The `$breakpoints` list is used to build our media queries.
+	// You can use these in the media-query mixin.
+	$breakpoints: (
+		$narrow '(max-width: #{$grid-small - 1})',
+		$small '(max-width: #{$grid-medium - 1})',
+		$medium '(min-width: #{$grid-medium}) and (max-width: #{$grid-large - 1})',
+		$medium-down '(max-width: #{$grid-large - 1})',
+		$medium-up '(min-width: #{$grid-medium})',
+		$large '(min-width: #{$grid-large}) and (max-width: #{$grid-widescreen - 1})',
+		$large-down '(max-width: #{$grid-widescreen - 1})',
+		$large-up '(min-width: #{$grid-large})',
+		$ex-large '(min-width: #{$grid-ex-large})',
+		$widescreen '(min-width: #{$grid-widescreen})'
+	);
+
+	/*============================================================================
+		Generate breakpoint-specific column widths and push classes
+			- Default column widths: $breakpoint-has-widths: ($small, $medium-up);
+			- Default is no push classes
+			- Will not work if `styles/global/grid.scss` is removed
+	==============================================================================*/
+	$breakpoint-has-widths: ($narrow, $small, $medium-up, $medium, $medium-down, $large, $large-up, $ex-large);
+	$breakpoint-has-push: ($small, $medium-up, $medium-down, $medium, $large, $large-up);
+
+
+// Sizing
+// ------
+	$width-site: 2000px;
+	$width-cont: $grid-widescreen;
+	$gutter: 30px;
+
+// Headline Sizes
+// --------------
+	$headlineFontWeight:       bold ;
+	$headlineFontStyle:        initial ;
+	$headlineFontColor:        $bodyTextColor;
+	$headlineLetterSpacing:    0 ;
+	
+
+
+// Button / Icons Settings
+// -------------------------
+
+	// $btnFontSize:             	16px ;
+	// $btnFontWeight:             bold ;
+	// $btnFontStyle:             	uppercase ;
+
+
+	// Default Colors
+	// $btnTextColor:             #fff ;
+	// $btnBgColor:			   rgba(#ffffff,0.3) ;
+	// $btnBgColor:			   $green ;
+	// $btnBorderColor:		   #fff ;
+	// $btnTextHoverColor:        darken(#fff,30%) ;
+	// $btnBgHoverColor:		   #fff ;
+	// $btnBorderHoverColor:	   #fff ;
+
+	// // Secondary Colors
+	// $sec_btnTextColor:         {{ settings.sec_btn_text_color }} ;
+	// $sec_btnBgColor:		   {{ settings.sec_btn_bg_color }} ;
+	// $sec_btnBorderColor:	   {{ settings.sec_btn_border_color }} ;
+	// $sec_btnTextHoverColor:    {{ settings.sec_btn_text_hover_color }} ;
+	// $sec_btnBgHoverColor:	   {{ settings.sec_btn_bg_hover_color }} ;
+	// $sec_btnBorderHoverColor:  {{ settings.sec_btn_border_hover_color }} ;
+
+	// // Tertiary Colors
+	// $tert_btnTextColor:        {{ settings.tert_btn_text_color }} ;
+	// $tert_btnBgColor:		   {{ settings.tert_btn_bg_color }} ;
+	// $tert_btnBorderColor:	   {{ settings.tert_btn_border_color }} ;
+	// $tert_btnTextHoverColor:   {{ settings.tert_btn_text_hover_color }} ;
+	// $tert_btnBgHoverColor:	   {{ settings.tert_btn_bg_hover_color }} ;
+	// $tert_btnBorderHoverColor: {{ settings.tert_btn_border_hover_color }} ;
+
+	// // Icon Colors
+	// $iconImageColor:           {{ settings.icon_text_color }} ;
+	// $iconBgColor:			   {{ settings.icon_bg_color }} ;
+	// $iconBorderColor:		   {{ settings.icon_border_color }} ;
+	// $iconBorderWidth:		   {{ settings.icon_border_width }}px ;
+	// $iconImageHoverColor:      {{ settings.icon_text_hover_color }} ;
+	// $iconBgHoverColor:		   {{ settings.icon_bg_hover_color }} ;
+	// $iconBorderHoverColor:	   {{ settings.icon_border_hover_color }} ;
+
+
+// Easings
+	// EASE IN
+	$ease-in-quad:      cubic-bezier(0.550,  0.085, 0.680, 0.530);
+	$ease-in-cubic:     cubic-bezier(0.550,  0.055, 0.675, 0.190);
+	$ease-in-quart:     cubic-bezier(0.895,  0.030, 0.685, 0.220);
+	$ease-in-quint:     cubic-bezier(0.755,  0.050, 0.855, 0.060);
+	$ease-in-sine:      cubic-bezier(0.470,  0.000, 0.745, 0.715);
+	$ease-in-expo:      cubic-bezier(0.950,  0.050, 0.795, 0.035);
+	$ease-in-circ:      cubic-bezier(0.600,  0.040, 0.980, 0.335);
+	$ease-in-back:      cubic-bezier(0.600, -0.280, 0.735, 0.045);
+
+	// EASE OUT
+	$ease-out-quad:     cubic-bezier(0.250,  0.460, 0.450, 0.940);
+	$ease-out-cubic:    cubic-bezier(0.215,  0.610, 0.355, 1.000);
+	$ease-out-quart:    cubic-bezier(0.165,  0.840, 0.440, 1.000);
+	$ease-out-quint:    cubic-bezier(0.230,  1.000, 0.320, 1.000);
+	$ease-out-sine:     cubic-bezier(0.390,  0.575, 0.565, 1.000);
+	$ease-out-expo:     cubic-bezier(0.190,  1.000, 0.220, 1.000);
+	$ease-out-circ:     cubic-bezier(0.075,  0.820, 0.165, 1.000);
+	$ease-out-back:     cubic-bezier(0.175,  0.885, 0.320, 1.275);
+
+	// EASE IN OUT
+	$ease-in-out-quad:  cubic-bezier(0.455,  0.030, 0.515, 0.955);
+	$ease-in-out-cubic: cubic-bezier(0.645,  0.045, 0.355, 1.000);
+	$ease-in-out-quart: cubic-bezier(0.770,  0.000, 0.175, 1.000);
+	$ease-in-out-quint: cubic-bezier(0.860,  0.000, 0.070, 1.000);
+	$ease-in-out-sine:  cubic-bezier(0.445,  0.050, 0.550, 0.950);
+	$ease-in-out-expo:  cubic-bezier(1.000,  0.000, 0.000, 1.000);
+	$ease-in-out-circ:  cubic-bezier(0.785,  0.135, 0.150, 0.860);
+	$ease-in-out-back:  cubic-bezier(0.680, -0.550, 0.265, 1.550);
+
+
+
+

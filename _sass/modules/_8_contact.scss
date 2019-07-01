@@ -1,0 +1,116 @@
+.page-Contact {
+	.main-content {
+		background: white;
+		@include gradientBlocks($red,$purp);
+		min-height: 100vh;
+	    display: flex;
+	    width: 100%;
+	    flex-direction: column;
+	    justify-content: center;
+
+	    .pane {
+	    	padding: 1em;
+	    	margin: 0 auto;
+	    	width: 100%;
+
+	    	.btn {
+	    		@extend .secondary;
+	    		$drkPurp:darken($purp,15%);
+	    		box-shadow: 0px 10px 30px 0px rgba($drkPurp,0.35);
+	    		transition: all .2s ease-out;
+	    		&:hover {
+	    			box-shadow: 0px 5px 15px 0px rgba($drkPurp,.85);
+	    		}
+	    	}
+	    }
+
+	}
+
+
+}
+
+
+
+
+// .contact.hero {
+// 	padding:120px 0;
+
+// 	.grid_no_gutter {
+// 		margin-bottom: -60px;
+// 		.grid__item {
+// 			margin-bottom: 60px;
+// 		}
+// 	}
+
+// 	.grid_no_gutter,
+// 	.grid__item  {
+// 		height: auto;
+// 		// vertical-align: top;
+// 	}
+// 	.container {
+// 		display: flex;
+// 		align-items: center;
+// 	}
+// 	.grid__item {
+// 		vertical-align: top;
+// 	}
+// 	form {
+// 		position: relative;
+// 		z-index: 1;
+// 	}
+
+// 	h2 {
+// 		font-size: 1.56em;
+// 		text-transform: uppercase;
+// 		margin: 0 auto 1.5em;
+// 		position: relative;
+// 		letter-spacing: 0.06em;
+// 		&:after {
+// 			content: ''; 
+// 			position: absolute;
+// 			bottom: -15px;
+// 			left:0;
+// 			// transform: translateX(-50%);
+// 			width: 100%;
+// 			max-width: 160px;
+// 			border-bottom: 3px solid black;
+// 			border-bottom-color: currentColor;
+// 		}
+// 	}
+
+// 	.rte {
+// 		font-size: 18px;
+// 	}
+
+// 	// .item {
+// 	// 	position: relative;
+// 	// 	width:90%;
+// 	// 	max-width: 300px;
+// 	// 	margin: 0 auto;
+// 	// 	img {
+// 	// 		margin: 0 auto 2em;
+// 	// 	}
+
+// 	// 	h2 {
+// 	// 		font-size: 1.56em;
+// 	// 		text-transform: uppercase;
+// 	// 		margin: 0 auto 1.5em;
+// 	// 		position: relative;
+// 	// 		letter-spacing: 0.06em;
+// 	// 		&:after {
+// 	// 			content: ''; 
+// 	// 			position: absolute;
+// 	// 			bottom: -15px;
+// 	// 			left:50%;
+// 	// 			transform: translateX(-50%);
+// 	// 			width: 100%;
+// 	// 			max-width: 160px;
+// 	// 			border-bottom: 3px solid black;
+// 	// 			border-bottom-color: currentColor;
+// 	// 		}
+// 	// 	}
+
+// 	// }
+
+
+// }

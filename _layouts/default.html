@@ -1,15 +1,12 @@
-{% comment %}
-	The default layout for the site, which is extended by all other layouts.
-	Includes the document <head>, main navigation and page footer
-{% endcomment %}
-
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
 	{% include global/head.html %}
-	<body>
-		{% include global/nav.html %}
-		<div class="main-container">
-			{{ content }}
+	<body class="template--{{page.layout}} page-{{page.title}}">
+		<div class="max-width--master">
+			{% include global/nav.html %}
+			<div class="main-content">
+				{{ content }}
+			</div>
 		</div>
 		{% include global/footer.html %}
 	</body>

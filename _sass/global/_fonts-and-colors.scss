@@ -1,0 +1,452 @@
+// body
+// ----
+	body {
+	    background:$dark;
+	    .max-width {
+			background-color:$dark;
+		}
+	    font-family:$bodyFont;
+	    color:$bodyTextColor;
+	    line-height:$bodyLineHeight;
+	    font-size:$bodyFontSize;
+
+	    &.locked {
+	    	overflow:hidden !important;
+	    	// height:100vh;
+	    }
+	}
+
+// headers
+// -------
+	h1, h2, h3, h4, h5, h6, 
+	.h1, .h2, .h3, .h4, .h5, .h6 {
+		margin: 0 0 ($bodyLineHeight / 2);
+		font-weight: $headlineFontWeight;
+		// font-family: $headlineFontFamily;
+		line-height: 1.1em;
+		color: $headlineFontColor;
+		letter-spacing: $headlineLetterSpacing;
+		text-rendering: optimizelegibility; // Fix the character spacing for headings
+		display:block;
+		a {
+			color: $headlineFontColor;
+		}
+
+		&.secondary {
+			// color:$headlineSecFontColor;
+		}
+		&.body-font {
+			// font-family: $baseFontFamily !important;
+		}
+	}
+
+	.template-post {
+		@for $i from 1 through 6 {
+			h#{$i}, .h#{$i} {
+				color:black;
+			}
+		}
+	}
+
+
+	// Modular Size Loop
+	// -----------------
+	@for $i from 1 through 6 {
+	  	h#{$i}, .h#{$i} {
+	    	font-size: modular-scale((5 - $i), $bodyFontSize, 1.4);
+	  	}
+	}
+
+	.page-title {
+		text-align:center;
+		margin:0 0 ($bodyLineHeight * 1);
+		color:$beige;
+		font-weight:900;
+		letter-spacing: -0.05em;
+	}
+
+
+// RTE and Basic Defaults
+
+
+
+
+	// Body text
+	// ----------
+		p {
+			margin: 0 0 $bodyLineHeight / 2;
+			line-height:$bodyLineHeight;
+			color:$bodyTextColor;
+			font-size:$bodyFontSize;
+		}
+
+
+		label {
+			// font-family: $headlineFontFamily;
+			color: $headlineFontColor;
+			font-weight: $headlineFontWeight;
+			font-size:$bodyFontSize - 1;
+
+		}
+		a {
+			color: $linkColor;
+			text-decoration: none;
+			&:hover {
+				color: $linkColorHover;
+				text-decoration: underline;
+			}
+		}
+
+	// RTE text
+	// --------
+		.rte {
+
+			margin:0 auto 1em;
+			max-width:800px;
+			@for $i from 1 through 6 {
+			  	h#{$i}, .h#{$i} {
+			    	font-size: modular-scale((6 - $i), $bodyFontSize, 1.4);
+			    	font-weight:900;
+			    	letter-spacing:-0.05em;
+			    	margin-bottom:($bodyLineHeight * 0.1);
+			  	}
+			}
+			p {
+				font-size:($bodyFontSize * 1.05);
+			}
+			a {
+				color: $linkColor;
+				text-decoration: none;
+				&:hover {
+					color: $linkColorHover;
+					text-decoration: underline;
+				}
+			}
+			blockquote {
+		    	border-left:3px solid $borderColor;
+		    	padding:($bodyLineHeight * 2);
+		    	background:$orange;
+		    	color:$dark;
+		    	margin:($bodyLineHeight * 2) 0;
+			}
+		}
+
+
+// Borders
+// -------
+	.border {
+		border:1px solid $borderColor;
+	}
+	.border-top {
+		border-top:1px solid $borderColor;
+	}
+	.border-bottom {
+		border-bottom:1px solid $borderColor;
+	}
+	.border-left {
+		border-left:1px solid $borderColor;
+	}
+	.border-right {
+		border-right:1px solid $borderColor;
+	}
+
+
+// Buttons Default
+// ---------------
+	$btnPadding:12px;
+	$btnBdrRadius:4px;
+	$btnEase: all .5s $ease-out-quad;
+	.btn {
+		display:inline-block;
+		position: relative;
+		font-size: 15px;
+		font-weight: 600;
+		// text-transform: uppercase;
+		color: white;
+		text-align: center;
+		min-width: 175px;
+		background-color: transparent;
+		border-radius:$btnBdrRadius;
+		border:none;
+		padding: $btnPadding ($btnPadding * 3.5) ($btnPadding - 1);
+		line-height: $bodyLineHeight;
+		cursor:pointer;
+		border-radius: $btnBdrRadius;
+		text-decoration:none;
+		z-index: 1;
+		box-shadow: 0px 7px 14px 0px rgba(black,0.15);
+		-webkit-backface-visibility: hidden;
+	    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+	    transform: translateZ(0);
+		transition: $btnEase;
+
+
+		&:after,
+		&:before {
+			content:'';
+			position: absolute;
+			width: 100%;
+			height: 101%;
+			left:50%;
+			top:50%;
+			-webkit-backface-visibility: hidden;
+		    -webkit-transform: translate(-50%,-50%) translateZ(0) scale(1.0, 1.0);
+		    transform: translate(-50%,-50%) translateZ(0);
+			z-index: -1;
+			background: $green;
+			border-radius: $btnBdrRadius;
+			transition: $btnEase;
+		}
+		&:before {
+			opacity: 1;
+			background: $revGrad;
+			transition: $btnEase;
+		}
+		&:after {
+			opacity: 0;
+			background: $defGrad;
+			transition: $btnEase;
+		}
+		&:focus {
+			color: white;
+		}
+		&:hover {
+			opacity: 1;
+			color: white;
+			box-shadow: 0px 3px 10px 0px rgba(black,0.25);
+			&:after {
+				opacity: 1;
+			}
+			&:before {
+				opacity: 0;
+			}
+			text-decoration: none;
+		}
+
+
+		&[disabled],
+		&.disabled {
+			$color: $lighterGrey;
+			border: 1px solid $color;
+			background: white;
+			color: $color;
+			box-shadow: none;
+			cursor: not-allowed;
+			// pointer-events: none;
+
+			&:after,
+			&:before {
+				display: none !important;
+			}
+		}
+
+		&.greyed {
+			$color: $lightestGrey;
+			border: 1px solid $color;
+			background: $color;
+			color: white;
+			box-shadow: none;
+
+			&:after,
+			&:before {
+				display: none !important;
+			}
+		}
+
+		
+
+		// // Secondary
+		// // ---------
+		&.secondary {
+			color: white !important;
+			background-color:$purp !important;    
+			border:1px solid $purp !important;
+			&:after,
+			&:before {
+				display: none !important;
+			}
+			&:hover {
+				border-color: $red !important;
+				background-color:$red !important;
+				color: white !important;
+
+			}
+		}
+
+		// // Tertiary
+		// // ---------
+		// &.tertiary {
+		// 	color: $tert_btnTextColor !important;
+		// 	{% if settings.tert_btn_bg_color != blank %}
+		// 		background-color:$tert_btnBgColor !important;    
+		// 	{% endif %}
+		// 	border:1px solid $tert_btnBorderColor !important;
+		// 	&:hover {
+		// 		border:1px solid $tert_btnBorderHoverColor !important;
+		// 		{% if settings.tert_btn_bg_hover_color != blank %}
+		// 			background-color:$tert_btnBgHoverColor !important;
+		// 		{% endif %}
+		// 		color: $tert_btnTextHoverColor !important;
+
+		// 	}
+		// }
+
+
+
+		&.right {
+			float:right;
+		}
+		&.full {
+			width:100%;
+		}
+
+		&.newsletter-btn {
+			// background-color:white !important;
+		}
+	} 
+
+	.icon {
+	  	display: inline-block;
+	  	width: 20px;
+	  	height: 20px;
+	  	vertical-align: middle;
+	  	fill: currentColor;
+	  	
+	  	.no-svg & {
+	    	display: none;
+	  	}
+	}
+
+
+
+// Forms 
+
+	// $inputBdrRadius:7px;
+	$inputBdrRadius: #{$btnBdrRadius};
+	
+	form {
+		// padding:1em;
+
+		.input-group {
+			$ease: $ease-out-quad;
+			$dur: .15s;
+			$del1: $dur / 2;
+			$del2: $del1 + $del1;
+			$transLabel: top $dur $del1 $ease;
+			$transInput: opacity $dur $del2 $ease;
+			position: relative;
+			z-index: 1;
+			margin: 0 0 33px;
+			label {
+				position: absolute;
+				width: auto;
+				top: 50%;
+				top: 18px;
+				left: 20px;
+				// transform: translateY(-50%);
+				z-index: 5;
+				pointer-events: none;
+				font-size: 16px;
+				color: white;
+				transition: $transLabel;
+			}
+			input, 
+			textarea {
+				@include prefix(appearance, none, ms webkit spec);
+				padding:16px;
+				margin: 0;
+				width: 100%;
+				height:auto;
+				position:relative;
+				display: block;
+				background: rgba(white, .35);
+				border: 2px solid white;
+				border-radius:$inputBdrRadius;
+				opacity: 0.25;
+				transition: $transInput;
+				&:hover,
+				&:focus {
+					outline: none;
+					opacity: 1;
+				}
+			}
+			textarea {
+				min-height: 300px;
+			}
+			textarea+label {
+				// top: 27px;
+			}
+			input:hover + label, 
+			input:focus + label, 
+			textarea:hover + label, 
+			textarea:focus + label,
+			&:hover label {
+				top: -25px;
+			}
+		}
+
+		.input-group--label-left {
+			margin:0 auto 1em;
+			label {
+				color:$beige;
+				font-weight:bold;
+				width:80px;
+				display:inline-block;
+				font-size:20px;
+				vertical-align:top;
+				text-align:right;
+				margin:12px 12px 8px 0;			
+			}
+			input, textarea {
+				background:darken($green, 10%);
+				border:1px solid darken($green,20%);
+				@include prefix(appearance, none, ms webkit spec);
+				width:calc(100% - 100px);
+				padding:1em;
+				display:inline-block;
+				vertical-align:top;
+				opacity:0.6;
+				&:focus {
+					opacity:1;
+				}
+			}
+		}
+		.btn-container {
+			text-align: right;
+		}
+
+		@media screen and (max-width:$grid-medium - 1) {
+			.input-group--label-left {
+				label {
+					text-align: left;
+					width:100%;
+				}
+				input, textarea {
+					width:100%;
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

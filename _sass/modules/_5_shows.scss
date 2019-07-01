@@ -1,0 +1,238 @@
+.shows {
+	position: relative;
+	overflow: hidden;
+	padding: 30px 0;
+	background: $white;
+	border-top: 1px solid $lightestGrey;
+	border-bottom: 1px solid $lightestGrey;
+
+
+	.container {
+		width: 90%;
+		padding: 0;
+	}
+
+	h2 {
+		font-size:2em;
+		font-family: $headlineFont;
+		font-weight: 600;
+		margin-bottom: 1em;
+		display: inline-block;
+		position: relative;
+		z-index: 1;
+		text-shadow: 
+			1px 1px 1px white,
+			-1px -1px 1px white,
+			-1px 1px 1px white,
+			1px -1px 1px white,
+
+			1px 1px 2px white,
+			-1px -1px 2px white,
+			-1px 1px 2px white,
+			1px -1px 2px white,
+
+			2px 2px 0px white,
+			-2px -2px 0px white,
+			-2px 2px 0px white,
+			2px -2px 0px white;
+			
+		// line-height: 1;
+		// border-bottom: 2px solid $darkGrey;
+		// border-image: $defGrad;
+		// border-image-slice:1;
+		// text-decoration: underline;
+
+		&:after {
+			content:'';
+			position: absolute;
+			bottom:5px;
+			left: 0;
+			width: 100%;
+			border-bottom: 2px solid $darkGrey;
+			border-image: $defGrad;
+			border-image-slice:1;
+			z-index: -1;
+		}
+	}
+
+	.grid {
+		margin-bottom: -30px;
+		.grid__item {
+			padding-bottom: 30px;
+			vertical-align: middle;
+		}
+	}
+	table {
+		width: 100%;
+		table-layout: fixed;
+
+		td {
+			padding: 1.5em 0;
+		}
+
+		tr {
+			border-bottom: 1px solid $lightestGrey;
+
+			&:last-of-type {
+				border-bottom-color: transparent;
+			}
+		}
+	}
+
+	.date {
+		line-height: 1.1;
+		&__top {
+			font-weight: 600;
+		}
+	}
+
+	.venue {
+		&.has-image {
+			.bg_image {
+				@extend .background-image;
+				width:80px;
+				height: 0;
+				min-height: 0;
+				padding-top: 80px;
+				display: inline-block;
+				vertical-align: middle;
+				margin-right:10px;
+			}
+			.venue__meta {
+				width: calc(100% - 100px);
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			&.mobile {
+				.bg_image {
+					width: 40%;
+					padding-top: 40%;
+				}
+				.venue__meta {
+					width: calc(60% - 20px);
+				}
+			}
+
+		}
+		h4 {
+			margin:0 0 0.25em;
+		}
+		a {
+			color: $lighterGrey;
+			svg {
+				width: 15px;
+				height: 20px;
+				margin-right: 3px;
+			}
+			span {
+				width: calc(100% - 30px);
+			}
+			svg, 
+			span {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	.price {
+		line-height: 1.1;
+		&__info {
+			color: $lighterGrey;
+		}
+	}
+
+	.mobile-shows {
+		.grid {
+			position: relative;
+			margin-bottom: 30px;
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left:50%;
+				width: 90%;
+				transform: translateX(-50%);
+				border-bottom: 1px solid $lightestGrey;
+			}
+		}
+	}
+	@media screen and (min-width: $grid-medium) {
+		padding: 90px 0;
+
+
+		.price {
+			padding: 1.5em;
+		}
+
+	}
+}
+
+
+
+
+
+// .tabs-container {
+//     max-width: 1200px;
+//     width:95%;
+//     margin: 0 auto;
+    
+//     ul.tabs{
+// 	    margin: 0px;
+// 	    padding: 0px;
+// 	    list-style: none;
+// 	    border-bottom:0.15em solid $beige;
+// 	    .tab-trig {
+// 		    background: none;
+// 		    color: $beige;
+// 		    display: inline-block;
+// 		    text-align:center;
+// 		    padding: 7px 35px;
+// 		    cursor: pointer;
+// 		    font-size:22px;
+// 		    border-bottom:0.25em solid rgba($red, 0);
+// 		    transform: translateY(0.1em);
+// 		    &.current {
+// 			    // background: #ededed;
+// 			    // color:$green;
+// 			    border-bottom-color:rgba($red, 1);
+// 			}
+// 		}
+// 	}
+// 	.tab-content{
+// 	    display: none;
+// 	    // background: #ededed;
+// 	    padding: 15px;
+// 	    &.tab--active {
+// 		    display: inherit;
+// 		}
+// 	}
+
+// 	@media screen and (max-width:$grid-medium - 1) {
+// 		// margin-top:calc(10vh + 25px);
+// 		margin-top:85px;
+// 		margin-top:75px;
+// 		max-height:calc(100vh - 160px);
+// 		overflow:hidden;
+// 		overflow-y:auto;
+// 		overflow-y: scroll; /* has to be scroll, not auto */
+//         -webkit-overflow-scrolling: touch;
+// 		.tabs {
+// 			display:flex;
+// 			// align-items:left;
+// 			max-width:900px;
+// 			width:100%;
+// 			overflow:hidden;
+// 			overflow-x:auto;
+// 			flex-wrap: nowrap;
+// 			margin:0 15px;
+// 			justify-content:flex-start;
+// 			.tab-trig {
+// 				// display:inline-flex;
+// 				flex:0 0 auto;
+// 			}
+// 		}
+// 	}
+// }
+
