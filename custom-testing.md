@@ -12,7 +12,7 @@ blocks:
 - template: block-slices
   block: blocks/slices
   slices:
-  - image: ''
+  - image: "/uploads/2018/02/17/building3.jpg"
     title: Livin on a Prayer
     text: We'll make it I swear
     url: []
@@ -30,8 +30,8 @@ blocks:
 - template: slider
   block: blocks/slider
   set_height: false
-  height_desktop: 
-  height_mobile: 
+  height_desktop: ''
+  height_mobile: ''
   image:
   - main_image: "/uploads/2018/02/17/bridge3.jpg"
     mobile_image: ''
@@ -43,7 +43,7 @@ blocks:
     custom_css: ''
     text_color: "#FFFFFF"
     overlay_color: "#000000"
-    opacity: '50'
+    opacity: "50"
   - main_image: "/uploads/2018/12/07/compass.jpg"
     mobile_image: ''
     title: Your Title Here!
@@ -52,7 +52,7 @@ blocks:
     custom_button_url: ''
     text_color: "#FFFFFF"
     overlay_color: "#000000"
-    opacity: '25'
+    opacity: "25"
     button_text: ''
     button_url: ''
     custom_css: ''
