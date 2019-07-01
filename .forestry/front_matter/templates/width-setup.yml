@@ -1,4 +1,19 @@
 ---
 label: Width Setup
 hide_body: true
-fields: []
+fields:
+- name: large_width
+  type: include
+  config: {}
+  template: width-creator
+  label: Large Width
+- name: medium_width
+  type: include
+  config: {}
+  template: width-creator
+  label: Medium Width
+- name: small_width
+  type: include
+  config: {}
+  template: width-creator
+  label: Small Width
