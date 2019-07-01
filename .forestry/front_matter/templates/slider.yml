@@ -13,24 +13,14 @@ fields:
   type: boolean
   label: Set Height
 - name: height_desktop
-  type: number
+  type: text
+  config:
+    required: false
   label: Height (desktop)
-  description: Only when "Set Height" is on.
-  default: 0
-  required: true
-  config:
-    min: 
-    max: 
-    step: 
 - name: height_mobile
-  type: number
-  description: Ignored if left blank. Set Height must be on.
-  default: 0
-  required: true
+  type: text
   config:
-    min: 
-    max: 
-    step: 
+    required: false
   label: Height (mobile - optional)
 - name: image
   type: field_group_list
@@ -108,15 +98,10 @@ fields:
       color_format: Hex
     default: "#000000"
   - name: opacity
-    type: number
-    label: Opacity
-    description: Number 0-100
-    default: 0
-    required: true
+    type: text
     config:
-      min: '1'
-      max: '100'
-      step: '1'
+      required: false
+    label: Opacity
   config:
     min: 
     max: 
