@@ -1,7 +1,7 @@
 ---
 title: Home
 banner_image: "/img/banner.png"
-layout: landing-page
+layout: custom-page
 heading: Damn son
 partners:
 - "/uploads/2017/11/13/stem.png"
