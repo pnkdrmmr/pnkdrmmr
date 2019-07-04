@@ -1,0 +1,19 @@
+{% assign s = section %}
+{% capture class %}{{s.template}}-{{forloop.index}}{% endcapture %}
+{% capture sectionID %}section-{{class}}{% endcapture %}
+<!-- includes/{{s.block}} -->
+{% assign imgs 		= s.slices %}
+{% assign allBgs 	= '' %}
+{% assign custom 	= s.custom_css | raw %}
+{% assign cssClass	= class | prepend: '.' %}
+{% assign cssLoop 	= custom | replace: '==', cssClass | replace: ';', ' !important;' %}
+<div 
+	class="grid-group {{class}}" id="{{sectionID}}">
+	<div class="grid ">
+
+	</div>
+	<style type="text/css">		
+		{{cssLoop}}
+	</style>
+</div>
+
