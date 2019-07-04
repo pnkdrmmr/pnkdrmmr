@@ -28,6 +28,16 @@ fields:
     schema:
       format: html-blocks
   label: Text
+- name: button_text
+  type: text
+  config:
+    required: false
+  label: Button Text
+- name: button_url
+  type: text
+  config:
+    required: false
+  label: Button URL
 - name: custom_css
   type: textarea
   default: ''
