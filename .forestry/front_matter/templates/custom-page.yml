@@ -17,6 +17,8 @@ fields:
   - block-content
   - block-slices
   - block-gradient-hero
+  - block-text
+  - block-grid-group
   config:
     min: 
     max: 
