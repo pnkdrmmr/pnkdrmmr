@@ -1,11 +1,6 @@
 ---
 title: Custom Testing
 date: 2019-06-26T05:00:00.000+00:00
-banner_image: ''
-heading: Testing 1
-sub_heading: Testing 2
-layout: custom-page
-textline: asdfasdfasdfasdfasdf
 publish_date: 2019-06-27T05:00:00.000+00:00
 show_staff: false
 blocks:

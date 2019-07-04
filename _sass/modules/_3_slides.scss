@@ -78,6 +78,7 @@
 			font-size: 2em;
 			margin: 0;
 			line-height: 1.1;
+			line-height: 0.85;
 			transform: translateY(0%) translateZ(0);
 			-webkit-backface-visibility: hidden;
 			transition: $hovTrans;
@@ -197,6 +198,7 @@
 			  		h2 {
 			  			font-size: 3em;
 			  			transform: translateY(15%) translateZ(0);
+			  			transform: translateY(-5%) translateZ(0);
 			  		}
 			  		.text-slide {
 			  			width: calc(100% - 60px);
