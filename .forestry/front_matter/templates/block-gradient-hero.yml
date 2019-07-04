@@ -53,3 +53,12 @@ fields:
     required: false
     color_format: Hex
   default: "#6A0D83"
+- name: custom_css
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Custom CSS
