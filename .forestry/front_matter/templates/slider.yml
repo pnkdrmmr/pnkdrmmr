@@ -9,6 +9,11 @@ fields:
   label: Block
   hidden: true
   default: blocks/slider
+- name: assign_to_group
+  type: text
+  config:
+    required: false
+  label: Assign to Group
 - name: set_height
   type: boolean
   label: Set Height
