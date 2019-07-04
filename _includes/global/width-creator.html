@@ -1,0 +1,85 @@
+
+{% assign hide_small = '' %}
+{% assign hide_medium = '' %}
+{% assign hide_large = '' %}
+{% if section.hide_small == true %}
+    {% assign hide_mobile = 'small--hide' %}
+{% endif %}
+{% if section.hide_medium == true %}
+    {% assign hide_tablet = 'medium--hide' %}
+{% endif %}
+{% if section.hide_large == true %}
+    {% assign hide_desktop = 'large-up--hide' %}
+{% endif %}
+
+{% case section.small-width %}
+    {% when '8%' %}{%- assign small_width = 'small--one-twelfth' -%}
+    {% when '10%' %}{%- assign small_width = 'small--one-tenth' -%}
+    {% when '16%' %}{%- assign small_width = 'small--two-twelfths' -%}
+    {% when '20%' %}{%- assign small_width = 'small--two-tenths' -%}
+    {% when '25%' %}{%- assign small_width = 'small--three-twelfths' -%}
+    {% when '30%' %}{%- assign small_width = 'small--three-tenths' -%}
+    {% when '33%' %}{%- assign small_width = 'small--four-twelfths' -%}
+    {% when '40%' %}{%- assign small_width = 'small--four-tenths' -%}
+    {% when '41%' %}{%- assign small_width = 'small--five-twelfths' -%}
+    {% when '50%' %}{%- assign small_width = 'small--one-half' -%}
+    {% when '58%' %}{%- assign small_width = 'small--seven-twelfths' -%}
+    {% when '60%' %}{%- assign small_width = 'small--six-tenths' -%}
+    {% when '66%' %}{%- assign small_width = 'small--eight-twelfths' -%}
+    {% when '70%' %}{%- assign small_width = 'small--seven-tenths' -%}
+    {% when '75%' %}{%- assign small_width = 'small--nine-twelfths' -%}
+    {% when '80%' %}{%- assign small_width = 'small--eigth-tenths' -%}
+    {% when '83%' %}{%- assign small_width = 'small--ten-twelfths' -%}
+    {% when '90%' %}{%- assign small_width = 'small--nine-tenths' -%}
+    {% when '91%' %}{%- assign small_width = 'small--eleven-twelfths' -%}
+    {% else %}{%- assign small_width = 'small--one-whole' -%}
+{% endcase %}
+{% case section.medium-width %}
+    {% when '8%' %}{%- assign medium_width = 'medium--one-twelfth' -%}
+    {% when '10%' %}{%- assign medium_width = 'medium--one-tenth' -%}
+    {% when '16%' %}{%- assign medium_width = 'medium--two-twelfths' -%}
+    {% when '20%' %}{%- assign medium_width = 'medium--two-tenths' -%}
+    {% when '25%' %}{%- assign medium_width = 'medium--three-twelfths' -%}
+    {% when '30%' %}{%- assign medium_width = 'medium--three-tenths' -%}
+    {% when '33%' %}{%- assign medium_width = 'medium--four-twelfths' -%}
+    {% when '40%' %}{%- assign medium_width = 'medium--four-tenths' -%}
+    {% when '41%' %}{%- assign medium_width = 'medium--five-twelfths' -%}
+    {% when '50%' %}{%- assign medium_width = 'medium--one-half' -%}
+    {% when '58%' %}{%- assign medium_width = 'medium--seven-twelfths' -%}
+    {% when '60%' %}{%- assign medium_width = 'medium--six-tenths' -%}
+    {% when '66%' %}{%- assign medium_width = 'medium--eight-twelfths' -%}
+    {% when '70%' %}{%- assign medium_width = 'medium--seven-tenths' -%}
+    {% when '75%' %}{%- assign medium_width = 'medium--nine-twelfths' -%}
+    {% when '80%' %}{%- assign medium_width = 'medium--eigth-tenths' -%}
+    {% when '83%' %}{%- assign medium_width = 'medium--ten-twelfths' -%}
+    {% when '90%' %}{%- assign medium_width = 'medium--nine-tenths' -%}
+    {% when '91%' %}{%- assign medium_width = 'medium--eleven-twelfths' -%}
+    {% else %}{%- assign medium_width = 'medium--one-whole' -%}
+{% endcase %}
+{% case section.large-width %}
+    {% when '8%' %}{%- assign large_width = 'large-up--one-twelfth' -%}
+    {% when '10%' %}{%- assign large_width = 'large-up--one-tenth' -%}
+    {% when '16%' %}{%- assign large_width = 'large-up--two-twelfths' -%}
+    {% when '20%' %}{%- assign large_width = 'large-up--two-tenths' -%}
+    {% when '25%' %}{%- assign large_width = 'large-up--three-twelfths' -%}
+    {% when '30%' %}{%- assign large_width = 'large-up--three-tenths' -%}
+    {% when '33%' %}{%- assign large_width = 'large-up--four-twelfths' -%}
+    {% when '40%' %}{%- assign large_width = 'large-up--four-tenths' -%}
+    {% when '41%' %}{%- assign large_width = 'large-up--five-twelfths' -%}
+    {% when '50%' %}{%- assign large_width = 'large-up--one-half' -%}
+    {% when '58%' %}{%- assign large_width = 'large-up--seven-twelfths' -%}
+    {% when '60%' %}{%- assign large_width = 'large-up--six-tenths' -%}
+    {% when '66%' %}{%- assign large_width = 'large-up--eight-twelfths' -%}
+    {% when '70%' %}{%- assign large_width = 'large-up--seven-tenths' -%}
+    {% when '75%' %}{%- assign large_width = 'large-up--nine-twelfths' -%}
+    {% when '80%' %}{%- assign large_width = 'large-up--eigth-tenths' -%}
+    {% when '83%' %}{%- assign large_width = 'large-up--ten-twelfths' -%}
+    {% when '90%' %}{%- assign large_width = 'large-up--nine-tenths' -%}
+    {% when '91%' %}{%- assign large_width = 'large-up--eleven-twelfths' -%}
+    {% else %}{%- assign large_width = 'large-up--one-whole' -%}
+{% endcase %}
+
+
+{% capture grid_widths %} {{small_width}} {{medium_width}} {{large_width}} {{hide_mobile}} {{hide_tablet}} {{hide_desktop}} {% endcapture %}
+
+

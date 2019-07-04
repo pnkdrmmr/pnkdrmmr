@@ -2,7 +2,7 @@
 title: Custom Testing
 date: 2019-06-26T05:00:00.000+00:00
 publish_date: 2019-06-27T05:00:00.000+00:00
-show_staff: false
+layout: custom-page
 blocks:
 - template: block-gradient-hero
   block: blocks/gradient-hero
@@ -92,7 +92,6 @@ blocks:
     hide_medium: false
     small_width: ''
     hide_small: false
-layout: custom-page
 
 ---
 What happens here.

@@ -7,10 +7,11 @@
 {% assign custom 	= s.custom_css | raw %}
 {% assign cssClass	= class | prepend: '.' %}
 {% assign cssLoop 	= custom | replace: '==', cssClass | replace: ';', ' !important;' %}
+{% assign grpHnd 	= s.title | handleize %}
 <div 
 	class="grid-group {{class}}" id="{{sectionID}}">
 	<div class="grid ">
-
+		<!--replace_{{grpHnd}}-->
 	</div>
 	<style type="text/css">		
 		{{cssLoop}}

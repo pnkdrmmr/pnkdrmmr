@@ -3,10 +3,38 @@ layout: default
 ---
 <!-- layouts/{{page.layout}} -->
 {% assign log = true %}
-{% comment %}{% include global/output.html %}{% endcomment %}
+{% include global/output.html %}
+
+{% assign grps = '' %}
+{% assign innrItm = '' %}
 <div class="">
 	{% for section in page.blocks %}
-		{% include {{ section.block }}.html %}
+		{% assign s = section %}
+		{% assign temp = s.template | handleize %}
+		{% if temp == 'grid' %}
+			{% capture grpItm %}
+				{% include {{ s.block }}.html %}
+				<!-- End of Group: {{s.title}}  -->
+			{% endcapture %}
+			{% assign grps = grps | append: grpItm %}
+		{% endif %}
+		{% if temp != 'grid' %}
+			{% unless s.group.size > 0 %}
+				{% include {{ s.block }}.html %}
+			{% else %}
+				{% capture rplcThs %}<!--replace_{{s.group|handleize}}-->{% endcapture %}
+				{% capture innrItm %}
+					{% include global/width-creator.html %}
+					<div class="grid__item {{grid_widths}}">
+						{% include {{ s.block }}.html %}
+					</div>
+					<!-- End of Item: {{s.group}}  -->
+					{{rplcThs}}
+				{% endcapture %}
+				{% assign grps = grps | replace: rplcThs, innrItm %}
+			{% endunless %}
+		{% endif %}
 	{% endfor %}
+	{{grps}}
 </div>
 
