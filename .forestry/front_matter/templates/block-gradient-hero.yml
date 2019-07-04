@@ -1,4 +1,55 @@
 ---
 label: Block - Gradient Hero
 hide_body: true
-fields: []
+fields:
+- name: block
+  type: text
+  config:
+    required: false
+  label: Block
+  hidden: true
+  default: blocks/gradient-hero
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: show_page_info
+  type: boolean
+  label: Show Page Info
+- name: image
+  type: file
+  config:
+    maxSize: 250
+  label: Image
+- name: image_position
+  type: text
+  config:
+    required: false
+  label: Image Position
+- name: image_size
+  type: text
+  config:
+    required: false
+  label: Image Size
+- name: text_color
+  type: color
+  label: Text Color
+  config:
+    required: false
+    color_format: Hex
+  default: "#FFFFFF"
+- name: left_color
+  type: color
+  label: Left Color
+  config:
+    required: false
+    color_format: Hex
+  default: "#EE5C6C"
+- name: right_color
+  type: color
+  label: Right Color
+  config:
+    required: false
+    color_format: Hex
+  default: "#6A0D83"
