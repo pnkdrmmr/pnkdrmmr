@@ -1,4 +1,39 @@
 ---
 label: Block - Text
 hide_body: true
-fields: []
+fields:
+- name: block
+  type: text
+  config:
+    required: false
+  label: Block
+  default: blocks/text
+  hidden: true
+- name: assign_to_group
+  type: text
+  config:
+    required: false
+  label: Assign to Group
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: text
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Text
+- name: custom_css
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Custom CSS
