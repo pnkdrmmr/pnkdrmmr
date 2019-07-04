@@ -30,5 +30,5 @@ fields:
   default: now
   hidden: true
 pages:
-- index.md
 - custom-testing.md
+- index.md
