@@ -53,3 +53,12 @@ fields:
     max: 
     labelField: 
   label: Slices
+- name: custom_css
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Custom CSS
