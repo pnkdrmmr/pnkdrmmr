@@ -9,6 +9,20 @@ fields:
   label: Block
   default: blocks/content
   hidden: true
+- name: assign_to_group
+  type: text
+  config:
+    required: false
+  label: Assign to Group
+- name: custom_css
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Custom CSS
 - name: widths
   type: field_group
   config: {}
