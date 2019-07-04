@@ -1,4 +1,33 @@
 ---
 label: Block - Grid Group
 hide_body: true
-fields: []
+fields:
+- name: block
+  type: text
+  config:
+    required: false
+  label: Block
+  default: blocks/grid
+  hidden: true
+- name: group_title
+  type: text
+  config:
+    required: false
+  label: Group Title
+- name: default_max-width
+  type: boolean
+  label: Default Max-Width
+- name: custom_max-width
+  type: text
+  config:
+    required: false
+  label: Custom Max-Width
+- name: custom_css
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Custom CSS
