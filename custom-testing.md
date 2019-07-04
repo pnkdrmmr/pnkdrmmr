@@ -1,8 +1,8 @@
 ---
 title: Custom Testing
-layout: custom-page
 date: 2019-06-26T05:00:00.000+00:00
 publish_date: 2019-06-27T05:00:00.000+00:00
+show_staff: false
 blocks:
 - template: block-gradient-hero
   block: blocks/gradient-hero
@@ -14,6 +14,14 @@ blocks:
   show_page_info: false
   image_position: ''
   image_size: ''
+  custom_css: ''
+  widths:
+    large_width: ''
+    hide_large: false
+    medium_width: ''
+    hide_medium: false
+    small_width: ''
+    hide_small: false
 - template: block-slices
   block: blocks/slices
   slices:
@@ -32,6 +40,7 @@ blocks:
     text: What?
     url: []
     custom_url: ''
+  custom_css: ''
 - template: slider
   block: blocks/slider
   set_height: false
@@ -61,6 +70,13 @@ blocks:
     button_text: ''
     button_url: ''
     custom_css: ''
+  widths:
+    large_width: ''
+    hide_large: false
+    medium_width: ''
+    hide_medium: false
+    small_width: ''
+    hide_small: false
 - template: block-content
   block: blocks/content
   hide_large: false
@@ -69,6 +85,14 @@ blocks:
   medium-width: 66% (2/3)
   hide_small: false
   small-width: ''
+  widths:
+    large_width: ''
+    hide_large: false
+    medium_width: ''
+    hide_medium: false
+    small_width: ''
+    hide_small: false
+layout: custom-page
 
 ---
 What happens here.
