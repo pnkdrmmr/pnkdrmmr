@@ -16,6 +16,7 @@ fields:
   - slider
   - block-content
   - block-slices
+  - block-gradient-hero
   config:
     min: 
     max: 
