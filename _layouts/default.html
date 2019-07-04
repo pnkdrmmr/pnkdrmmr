@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 	{% include global/head.html %}
-	<body class="template--{{page.layout}} page-{{page.title}}">
+	<body class="template-{{page.layout}} page-{{page.title|handlize}}">
 		<div class="max-width--master">
 			{% include global/nav.html %}
 			<div class="main-content">

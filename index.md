@@ -11,10 +11,10 @@ blocks:
     title: Little Miss
     url: []
     custom_url: ''
-    text: Caint' be wrong
+    text: Caint be wrong
   - image: "/uploads/2018/02/17/building.jpg"
     title: Here we<br/>go again
-    text: Going down the only road we've ever known
+    text: Going down the only road weve ever known
     url: []
     custom_url: ''
   - image: "/uploads/2018/12/07/compass.jpg"

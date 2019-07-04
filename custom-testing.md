@@ -1,8 +1,8 @@
 ---
 title: Custom Testing
+layout: custom-page
 date: 2019-06-26T05:00:00.000+00:00
 publish_date: 2019-06-27T05:00:00.000+00:00
-show_staff: false
 blocks:
 - template: block-gradient-hero
   block: blocks/gradient-hero
@@ -69,7 +69,6 @@ blocks:
   medium-width: 66% (2/3)
   hide_small: false
   small-width: ''
-layout: ''
 
 ---
 What happens here.

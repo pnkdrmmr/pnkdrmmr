@@ -1,0 +1,33 @@
+<!-- includes/blocks/output -->
+{% assign pageData = page | jsonify | strip_html | replace: "'", '&apos;' %}
+{% if html == true %}
+	<div class="jsonContainer">
+		<pre id="json" style="">
+			{{pageData}}
+		</pre>
+	</div>
+	<style type="text/css">
+		.jsonContainer {
+			padding:1em 3em;
+			background:rgb(200,200,200);
+			color:black;
+			font-size: 14px;
+		}
+		#json {
+			max-height: 400px;
+			overflow: auto;
+		}
+	</style>
+{% endif %}
+<script type="text/javascript">
+	var data = '{{ pageData }}';
+	var dataString = JSON.parse(data);
+	var dataString = JSON.stringify(dataString, null, 2);
+	var dataString = dataString.replace(/"(\w+)"\s*:/g, '$1:');
+	{% if html == true %}
+		document.getElementById("json").innerHTML = dataString;
+	{% endif %}
+	{% if log == true %}
+		console.log(dataString)
+	{% endif %}
+</script>
