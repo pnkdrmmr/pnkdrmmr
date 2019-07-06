@@ -1,7 +1,7 @@
 ---
-publish_date: 2019-07-04 07:04:03 +0000
+publish_date: 2019-07-04T07:04:03.000+00:00
 title: About
-date: 2019-07-01 05:00:00 +0000
+date: 2019-07-01T05:00:00.000+00:00
 blocks:
 - template: block-grid-group
   block: blocks/grid
@@ -76,3 +76,14 @@ blocks:
 layout: custom-page
 
 ---
+Leave that to me. Send a distress signal, and inform the Senate that all on board were killed. Look, I can take you as far as Anchorhead. You can get a transport there to Mos Eisley or wherever you're going.
+
+In my experience, there is no such thing as luck. She must have hidden the plans in the escape pod. Send a detachment down to retrieve them, and see to it personally, Commander. There'll be no one to stop us this time!
+
+I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. Red Five standing by. The Force is strong with this one. I have you now. Alderaan? I'm not going to Alderaan. I've got to go home. It's late, I'm in for it as it is.
+
+Dantooine. They're on Dantooine. You mean it controls your actions? Partially, but it also obeys your commands. Look, I ain't in this for your revolution, and I'm not in it for you, Princess. I expect to be well paid. I'm in it for the money.
+
+As you wish. Leave that to me. Send a distress signal, and inform the Senate that all on board were killed. Obi-Wan is here. The Force is with him. A tremor in the Force. The last time I felt it was in the presence of my old master.
+
+What!? Don't act so surprised, Your Highness. You weren't on any mercy mission this time. Several transmissions were beamed to this ship by Rebel spies. I want to know what happened to the plans they sent you.
