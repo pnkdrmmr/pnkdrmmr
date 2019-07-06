@@ -138,7 +138,7 @@
 
 
 <script type="text/javascript">
-	var data = '{"layout":"custom-page","publish_date":"2019-07-04 07:04:03 +0000","title":"About","date":"2019-07-01 05:00:00 +0000","blocks":[{"template":"block-grid-group","block":"blocks/grid","group_title":"Group 1","default_max-width":false,"custom_max-width":"","custom_css":""},{"template":"slider","block":"blocks/slider","widths":{"large_width":"100%","medium_width":"100%","small_width":"100%","hide_large":false,"hide_medium":false,"hide_small":false},"assign_to_group":"Group 1","image":[{"main_image":"/uploads/2018/02/17/bridge3.jpg","mobile_image":"","title":"Your Title Here!","text":"Et harum quidem rerum facilis est et expedita distinctio. Esse cillum dolore eu fugiat nulla pariatur.","custom_button_url":"","custom_css":"== .center-content {\ntop: 15%;\nleft:15%;\ntransform: translate(-15%,-15%);\ntext-align: left;\n}","text_color":"#FFFFFF","overlay_color":"#000000","opacity":"50","button_text":"","button_url":""}],"set_height":false,"height_desktop":"","height_mobile":""},{"template":"block-content","block":"blocks/content","widths":{"large_width":"50% (1/2)","medium_width":"75% (3/4)","small_width":"100%","hide_large":false,"hide_medium":false,"hide_small":false},"assign_to_group":"Group 1","custom_css":""},{"template":"block-text","block":"blocks/text","widths":{"large_width":"50% (1/2)","medium_width":"75% (3/4)","small_width":"100%","hide_large":false,"hide_medium":false,"hide_small":false},"assign_to_group":"Group 1","title":"Fingers crossed","text":"Oh God, my uncle. How am I ever gonna explain this?Partially, but it also obeys your commands. I want to come with you to Alderaan. There&apos;s nothing for me here now. I want to learn the ways of the Force and be a Jedi, like my father before me. As you wish.You&apos;re all clear, kid. Let&apos;s blow this thing and go home! Don&apos;t be too proud of this technological terror you&apos;ve constructed. The ability to destroy a planet is insignificant next to the power of the Force.","button_text":"Yo Ho Ho","button_url":"#","custom_css":""}],"content":"","dir":"/about/","name":"about.md","path":"about.md","url":"/about/"}';
+	var data = '{"layout":"custom-page","publish_date":"2019-07-04 07:04:03 +0000","title":"About","date":"2019-07-01 05:00:00 +0000","blocks":[{"template":"block-grid-group","block":"blocks/grid","group_title":"Group 1","default_max-width":false,"custom_max-width":"","custom_css":""},{"template":"slider","block":"blocks/slider","widths":{"large_width":"100%","medium_width":"100%","small_width":"100%","hide_large":false,"hide_medium":false,"hide_small":false},"assign_to_group":"Group 1","image":[{"main_image":"/uploads/2018/02/17/bridge3.jpg","mobile_image":"","title":"Your Title Here!","text":"Et harum quidem rerum facilis est et expedita distinctio. Esse cillum dolore eu fugiat nulla pariatur.","custom_button_url":"","custom_css":"== .center-content {top: 15%;left:15%;transform: translate(-15%,-15%);text-align: left;}","text_color":"#FFFFFF","overlay_color":"#000000","opacity":"50","button_text":"","button_url":""}],"set_height":false,"height_desktop":"","height_mobile":""},{"template":"block-content","block":"blocks/content","widths":{"large_width":"50% (1/2)","medium_width":"75% (3/4)","small_width":"100%","hide_large":false,"hide_medium":false,"hide_small":false},"assign_to_group":"Group 1","custom_css":""},{"template":"block-text","block":"blocks/text","widths":{"large_width":"50% (1/2)","medium_width":"75% (3/4)","small_width":"100%","hide_large":false,"hide_medium":false,"hide_small":false},"assign_to_group":"Group 1","title":"Fingers crossed","text":"Oh God, my uncle. How am I ever gonna explain this?Partially, but it also obeys your commands. I want to come with you to Alderaan. There&apos;s nothing for me here now. I want to learn the ways of the Force and be a Jedi, like my father before me. As you wish.You&apos;re all clear, kid. Let&apos;s blow this thing and go home! Don&apos;t be too proud of this technological terror you&apos;ve constructed. The ability to destroy a planet is insignificant next to the power of the Force.","button_text":"Yo Ho Ho","button_url":"#","custom_css":""}],"content":"","dir":"/about/","name":"about.md","path":"about.md","url":"/about/"}';
 	var dataString = JSON.parse(data);
 	var dataString = JSON.stringify(dataString, null, 2);
 	var dataString = dataString.replace(/"(\w+)"\s*:/g, '$1:');
@@ -156,7 +156,53 @@
 		
 		
 		
+
+		
+
+	
+		
+		
+		
+		
+
+		
 			
+				
+				
+				
+			
+		
+
+	
+		
+		
+		
+		
+
+		
+			
+				
+				
+				
+			
+		
+
+	
+		
+		
+		
+		
+
+		
+			
+				
+				
+				
+			
+		
+
+	
+	
 				
 
 
@@ -167,29 +213,46 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div 
 	class="grid-group block-grid-group-1" id="section-block-grid-group-1">
 	<div class="grid ">
-		<!--replace_-->
-	</div>
-	<style type="text/css">		
-		
-	</style>
-</div>
+		<div class="" >
+			
+					
 
 
-			
-		
-	
-		
-		
-		
-		
-			
-				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<div class="grid__item  small--one-whole medium--one-whole large-up--one-whole    ">
+						
 
 
 <!-- includes/blocks/slider -->
+
+
+
 
 
 
@@ -227,10 +290,18 @@
 		
 		
 		
+		
 
 		
 		
 		
+
+		
+		
+		
+		
+		
+
 
 
 		<div class="slide slide-1 background-image">
@@ -269,32 +340,64 @@
 				background: #000000;
 				opacity: 0.5;
 			}
-		
+		.slide-1 .center-content {
+top: 15% !important;
+left:15% !important;
+transform: translate(-15%,-15%) !important;
+text-align: left !important;
+}
+	
 </style>
 
 
 
 
-			
-		
-	
-		
-		
-		
-		
-			
-				<!-- includes/blocks/content -->
+					</div>
+					<!-- End of Item: slider /   -->
+					
+					
 
 
-			
-		
-	
-		
-		
-		
-		
-			
-				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<div class="grid__item  small--one-whole medium--nine-twelfths large-up--one-half    ">
+						<!-- includes/blocks/content -->
+
+
+					</div>
+					<!-- End of Item: block-content /   -->
+					
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<div class="grid__item  small--one-whole medium--nine-twelfths large-up--one-half    ">
+						
 
 
 <!-- includes/blocks/text -->
@@ -306,58 +409,36 @@
 
 
 
-
-<div class="main-hero background-image block-text-4" id="section-block-text-4">
-	<div class="gradient">
-		
-			<div></div>
-		
-			<div></div>
-		
-			<div></div>
-		
-			<div></div>
-		
-			<div></div>
-		
-			<div></div>
-		
-			<div></div>
-		
-			<div></div>
-		
-			<div></div>
-		
-			<div></div>
-		
-	</div>
-	<div class="container">
-		<div class="meta-overlay">
-			<h2 class="post-title">Fingers crossed</h2>
-			
-		</div>
-	</div>
+<div class="text-block block-text-4" id="section-block-text-4">
+	
+		<h2 class="post-title">Fingers crossed</h2>
+	
+	
+		<div class="rte"><p>Oh God, my uncle. How am I ever gonna explain this?</p><p>Partially, but it also obeys your commands. I want to come with you to Alderaan. There's nothing for me here now. I want to learn the ways of the Force and be a Jedi, like my father before me. As you wish.</p><p>You're all clear, kid. <strong>Let's blow this thing and go home!</strong> <em>Don't be too proud of this technological terror you've constructed.</em> The ability to destroy a planet is insignificant next to the power of the Force.</p></div>
+	
+	
+		<a class="btn" href="#">Yo Ho Ho</a>
+	
 	<style type="text/css">
-		.main-hero::after {
-			background-image: url();
-			
-			background-position: !important;
-			
-			
-			background-size: !important;
-			
-		}
-		.main-hero .gradient {
-			mix-blend-mode: darken;
-		}
-		
 		
 	</style>
 </div>
-			
+					</div>
+					<!-- End of Item: block-text / Fingers crossed  -->
+					<!--replace_Group 1-->
+				
+				
+				
+		</div>
+	</div>
+	<style type="text/css">		
 		
-	
-	
+	</style>
+</div>
+
+
+				<!-- End of Group:   -->
+			
 </div>
 
 
