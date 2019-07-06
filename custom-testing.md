@@ -22,76 +22,12 @@ blocks:
     hide_medium: false
     small_width: ''
     hide_small: false
-- template: block-slices
-  block: blocks/slices
-  slices:
-  - image: "/uploads/2018/02/17/building3.jpg"
-    title: Livin on a Prayer
-    text: We'll make it I swear
-    url: []
-    custom_url: ''
-  - image: "/uploads/2018/02/17/bridge.jpg"
-    title: What it do
-    text: What it say
-    url: []
-    custom_url: ''
-  - image: "/uploads/2018/02/17/city.jpg"
-    title: Rollin
-    text: What?
-    url: []
-    custom_url: ''
+- template: block-grid-group
+  block: blocks/grid
+  group_title: ''
+  default_max-width: false
+  custom_max-width: ''
   custom_css: ''
-- template: slider
-  block: blocks/slider
-  set_height: false
-  height_desktop: ''
-  height_mobile: ''
-  image:
-  - main_image: "/uploads/2018/02/17/bridge3.jpg"
-    mobile_image: ''
-    title: Some Other Shit
-    text: asdfasdfasdfasdfasdf
-    button_text: ''
-    button_url: ''
-    custom_button_url: ''
-    custom_css: ''
-    text_color: "#FFFFFF"
-    overlay_color: "#000000"
-    opacity: '50'
-  - main_image: "/uploads/2018/12/07/compass.jpg"
-    mobile_image: ''
-    title: Your Title Here!
-    text: Et harum quidem rerum facilis est et expedita distinctio. Esse cillum dolore
-      eu fugiat nulla pariatur.
-    custom_button_url: ''
-    text_color: "#FFFFFF"
-    overlay_color: "#000000"
-    opacity: '25'
-    button_text: ''
-    button_url: ''
-    custom_css: ''
-  widths:
-    large_width: ''
-    hide_large: false
-    medium_width: ''
-    hide_medium: false
-    small_width: ''
-    hide_small: false
-- template: block-content
-  block: blocks/content
-  hide_large: false
-  large-width: 50% (1/2)
-  hide_medium: false
-  medium-width: 66% (2/3)
-  hide_small: false
-  small-width: ''
-  widths:
-    large_width: ''
-    hide_large: false
-    medium_width: ''
-    hide_medium: false
-    small_width: ''
-    hide_small: false
 
 ---
 What happens here.
