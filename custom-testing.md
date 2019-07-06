@@ -24,10 +24,11 @@ blocks:
     hide_small: false
 - template: block-grid-group
   block: blocks/grid
-  group_title: ''
+  group_title: Main Group
   default_max-width: false
   custom_max-width: ''
   custom_css: ''
+  no_gutter: false
 
 ---
 What happens here.
