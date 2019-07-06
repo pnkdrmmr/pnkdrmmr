@@ -11,29 +11,33 @@ layout: default
 	{% for section in page.blocks %}
 		{% assign s = section %}
 		{% assign temp = s.template | handleize %}
-		{% if temp == 'grid' %}
+		{% assign grd = 'block-grid-group' %}
+		{% if temp == grd %}
 			{% capture grpItm %}
 				{% include {{ s.block }}.html %}
 				<!-- End of Group: {{s.title}}  -->
 			{% endcapture %}
 			{% assign grps = grps | append: grpItm %}
 		{% endif %}
-		{% if temp != 'grid' %}
-			{% unless s.group.size > 0 %}
+
+		{% if temp != grd %}
+			{% unless s.assign_to_group %}
 				{% include {{ s.block }}.html %}
+				<!-- End of Item: {{temp}} / {{s.title}}  -->
 			{% else %}
-				{% capture rplcThs %}<!--replace_{{s.group|handleize}}-->{% endcapture %}
+				{% capture rplcThs %}<!--replace_{{s.assign_to_group|handleize}}-->{% endcapture %}
 				{% capture innrItm %}
 					{% include global/width-creator.html %}
 					<div class="grid__item {{grid_widths}}">
 						{% include {{ s.block }}.html %}
 					</div>
-					<!-- End of Item: {{s.group}}  -->
+					<!-- End of Item: {{temp}} / {{s.title}}  -->
 					{{rplcThs}}
 				{% endcapture %}
 				{% assign grps = grps | replace: rplcThs, innrItm %}
 			{% endunless %}
 		{% endif %}
+
 	{% endfor %}
 	{{grps}}
 </div>

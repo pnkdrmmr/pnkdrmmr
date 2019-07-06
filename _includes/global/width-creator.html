@@ -1,18 +1,15 @@
 
-{% assign hide_small = '' %}
-{% assign hide_medium = '' %}
-{% assign hide_large = '' %}
-{% if section.hide_small == true %}
-    {% assign hide_mobile = 'small--hide' %}
-{% endif %}
-{% if section.hide_medium == true %}
-    {% assign hide_tablet = 'medium--hide' %}
-{% endif %}
-{% if section.hide_large == true %}
-    {% assign hide_desktop = 'large-up--hide' %}
-{% endif %}
+{% assign sw = section.widths %}
 
-{% case section.small-width %}
+{% assign hide_small = '' %}{% if sw.hide_small == true %}{% assign hide_mobile = 'small--hide' %}{% endif %}
+{% assign hide_medium = '' %}{% if sw.hide_medium == true %}{% assign hide_tablet = 'medium--hide' %}{% endif %}
+{% assign hide_large = '' %}{% if sw.hide_large == true %}{% assign hide_desktop = 'large-up--hide' %}{% endif %}
+
+{% assign smWdth = sw.small_width | split: ' ' | first %}
+{% assign mdWdth = sw.medium_width | split: ' ' | first %}
+{% assign lgWdth = sw.large_width | split: ' ' | first %}
+
+{% case smWdth %}
     {% when '8%' %}{%- assign small_width = 'small--one-twelfth' -%}
     {% when '10%' %}{%- assign small_width = 'small--one-tenth' -%}
     {% when '16%' %}{%- assign small_width = 'small--two-twelfths' -%}
@@ -34,7 +31,7 @@
     {% when '91%' %}{%- assign small_width = 'small--eleven-twelfths' -%}
     {% else %}{%- assign small_width = 'small--one-whole' -%}
 {% endcase %}
-{% case section.medium-width %}
+{% case mdWdth %}
     {% when '8%' %}{%- assign medium_width = 'medium--one-twelfth' -%}
     {% when '10%' %}{%- assign medium_width = 'medium--one-tenth' -%}
     {% when '16%' %}{%- assign medium_width = 'medium--two-twelfths' -%}
@@ -56,7 +53,7 @@
     {% when '91%' %}{%- assign medium_width = 'medium--eleven-twelfths' -%}
     {% else %}{%- assign medium_width = 'medium--one-whole' -%}
 {% endcase %}
-{% case section.large-width %}
+{% case lgWdth %}
     {% when '8%' %}{%- assign large_width = 'large-up--one-twelfth' -%}
     {% when '10%' %}{%- assign large_width = 'large-up--one-tenth' -%}
     {% when '16%' %}{%- assign large_width = 'large-up--two-twelfths' -%}
@@ -79,7 +76,4 @@
     {% else %}{%- assign large_width = 'large-up--one-whole' -%}
 {% endcase %}
 
-
 {% capture grid_widths %} {{small_width}} {{medium_width}} {{large_width}} {{hide_mobile}} {{hide_tablet}} {{hide_desktop}} {% endcapture %}
-
-

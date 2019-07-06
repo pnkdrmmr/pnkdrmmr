@@ -3,12 +3,15 @@
 {% capture sectionID %}section-{{class}}{% endcapture %}
 <!-- includes/{{s.block}} -->
 
-{% comment %}<div>{{s}}</div>{% endcomment %}
-
 {% assign imgs 		= s.image %}
 {% assign set_hght 	= s.set_height %}
 {% assign hght_desk = s.height_desktop %}
 {% assign hght_mob 	= s.height_mobile %}
+
+{% comment %} Custom CSS {% endcomment %}
+{% assign custom 	= s.custom_css | raw %}
+{% assign cssClass	= class | prepend: '.' %}
+{% assign cssLoop 	= custom | replace: '==', cssClass | replace: ';', ' !important;' %}
 
 {% assign loop = 0 %}
 {% assign sliderCSS = '' %}
@@ -34,6 +37,7 @@
 		{% assign bg_clr	= img.overlay_color %}
 		{% assign op		= img.opacity | times: 0.01 %}
 		{% comment %} Positioning {% endcomment %}
+		
 		
 		
 		{% comment %} Start CSS {% endcomment %}
@@ -75,6 +79,13 @@
 			{% assign slideCSS = slideCSS | append: bgImgCSS %}
 		{% endif %}
 
+		{% comment %} Custom CSS {% endcomment %}
+		{% assign custom 	= img.custom_css | raw %}
+		{% assign cssClass	= slideClass | prepend: '.' %}
+		{% assign customCSS = custom | replace: '==', cssClass | replace: ';', ' !important;' %}
+		{% assign slideCSS 	= slideCSS | append: customCSS %}
+
+
 
 		<div class="slide {{slideClass}} background-image">
 			
@@ -100,6 +111,7 @@
 </div>
 <style type="text/css">
 	{{sliderCSS}}
+	{{cssLoop}}
 </style>
 
 

@@ -5,47 +5,22 @@
 {% assign custom 	= s.custom_css | raw %}
 {% assign cssClass	= class | prepend: '.' %}
 {% assign cssLoop 	= custom | replace: '==', cssClass | replace: ';', ' !important;' %}
-{% assign img 		= s.image %}
 {% assign ttl 		= s.title | default: page.title %}
-{% assign imgPos 	= s.image_position %}
-{% assign imgSze 	= s.image_size %}
-{% assign blend 	= s.blend | default: 'darken' %}
+{% assign rte 		= s.text %}
+{% assign btn_txt 	= s.button_text %}
+{% assign btn_url 	= s.button_url %}
 
-<div class="main-hero background-image {{class}}" id="{{sectionID}}">
-	<div class="gradient">
-		{% for i in (1..10) %}
-			<div></div>
-		{% endfor %}
-	</div>
-	<div class="container">
-		<div class="meta-overlay">
-			<h2 class="post-title">{{ ttl }}</h2>
-			{% if s.show_page_info == true %}
-				<span class="date">{{ page.date | date: '%B %e, %Y' }}</span>
-				<div class="tags">
-					{% for p in page.tags %}
-						<span>{{ p }}</span> {% unless forloop.last %}<span>|</span>{% endunless %}
-						{% assign p_handle = p | slugify | append: ' ' %}
-						{% assign this_posts_tags = this_posts_tags | append: p_handle %}
-					{% endfor %}
-				</div>
-			{% endif %}
-		</div>
-	</div>
+<div class="text-block {{class}}" id="{{sectionID}}">
+	{% if ttl != blank %}
+		<h2 class="post-title">{{ ttl }}</h2>
+	{% endif %}
+	{% if rte != blank %}
+		<div class="rte">{{rte}}</div>
+	{% endif %}
+	{% if btn_txt != blank and btn_url != blank %}
+		<a class="btn" href="{{btn_url}}">{{btn_txt}}</a>
+	{% endif %}
 	<style type="text/css">
-		.main-hero::after {
-			background-image: url({{ img }});
-			{% if imgPos != '' %}
-			background-position:{{ imgPos }} !important;
-			{% endif %}
-			{% if imgSze != '' %}
-			background-size:{{ imgSze }} !important;
-			{% endif %}
-		}
-		.main-hero .gradient {
-			mix-blend-mode: {{blend}};
-		}
-		
 		{{cssLoop}}
 	</style>
 </div>
