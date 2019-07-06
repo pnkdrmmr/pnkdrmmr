@@ -1,4 +1,43 @@
 ---
 label: Block - Gallery
 hide_body: true
-fields: []
+fields:
+- name: block
+  type: text
+  config:
+    required: false
+  label: Block
+  default: blocks/gallery
+  hidden: true
+- name: assign_to_group
+  type: text
+  config:
+    required: false
+  label: Assign to Group
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: images
+  type: field_group_list
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 250
+    label: Image
+  - name: caption
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Caption
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Images
