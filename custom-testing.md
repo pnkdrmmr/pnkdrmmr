@@ -25,10 +25,72 @@ blocks:
 - template: block-grid-group
   block: blocks/grid
   group_title: Main Group
-  default_max-width: false
+  default_max-width: true
   custom_max-width: ''
   custom_css: ''
-  no_gutter: false
+  no_gutter: true
+- template: block-content
+  block: blocks/content
+  widths:
+    large_width: 50% (1/2)
+    medium_width: 100%
+    small_width: 100%
+    hide_large: false
+    hide_medium: false
+    hide_small: false
+  assign_to_group: Main Group
+  custom_css: ''
+- template: slider
+  block: blocks/slider
+  widths:
+    large_width: 100%
+    medium_width: 100%
+    small_width: 100%
+    hide_large: false
+    hide_medium: false
+    hide_small: false
+  assign_to_group: Main Group
+  image:
+  - main_image: "/uploads/2018/02/17/city.jpg"
+    mobile_image: ''
+    title: Your Title Here!
+    text: Et harum quidem rerum facilis est et expedita distinctio. Esse cillum dolore
+      eu fugiat nulla pariatur.
+    custom_button_url: ''
+    custom_css: |-
+      == .center-content {
+      left: 5%;
+      transform: translateY(-50%);
+      width: 90%;
+      max-width: 500px;
+      }
+    text_color: "#FFFFFF"
+    overlay_color: "#F5A623"
+    opacity: '75'
+    button_text: ''
+    button_url: ''
+  set_height: false
+  height_desktop: ''
+  height_mobile: ''
+- template: block-gallery
+  block: blocks/gallery
+  widths:
+    large_width: 100%
+    medium_width: 100%
+    small_width: 100%
+    hide_large: false
+    hide_medium: false
+    hide_small: false
+  assign_to_group: Main Group
+  title: Where I've Been
+  images:
+  - image: "/uploads/2018/02/17/building3.jpg"
+    caption: Wtf is this shit?
+  - image: "/uploads/2018/02/17/building2.jpg"
+    caption: All Over
+  - image: "/uploads/2018/02/17/bridge.jpg"
+    caption: ''
+  custom_css: ''
 
 ---
 What happens here.
