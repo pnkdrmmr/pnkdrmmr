@@ -24,12 +24,12 @@ blocks:
 - template: block-grid-group
   block: blocks/grid
   group_title: Group Main
-  default_max-width: false
+  default_max-width: true
   custom_max-width: ''
   custom_css: ''
   no_gutter: false
-  grid_vertical_align: ''
-  grid_horizontal_align: ''
+  grid_vertical_align: Middle
+  grid_horizontal_align: Right
 - template: block-content
   block: blocks/content
   widths:
