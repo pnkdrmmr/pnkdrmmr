@@ -25,6 +25,36 @@ fields:
   config:
     required: false
   label: Custom Max-Width
+- name: grid_vertical_align
+  type: select
+  default: Middle
+  config:
+    required: false
+    options:
+    - Top
+    - Middle
+    - Bottom
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Grid Vertical Align
+- name: grid_horizontal_align
+  type: select
+  default: Center
+  config:
+    required: false
+    options:
+    - Left
+    - Center
+    - Right
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Grid Horizontal Align
 - name: custom_css
   type: textarea
   default: ''
