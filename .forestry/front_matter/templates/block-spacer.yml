@@ -1,4 +1,16 @@
 ---
 label: Block - Spacer
 hide_body: true
-fields: []
+fields:
+- name: block
+  type: text
+  config:
+    required: false
+  label: Block
+  hidden: true
+  default: blocks/spacer
+- name: min-height
+  type: text
+  config:
+    required: false
+  label: Min-Height (optional)
