@@ -2,7 +2,7 @@
 {% capture class %}{{s.template}}-{{forloop.index}}{% endcapture %}
 {% capture sectionID %}section-{{class}}{% endcapture %}
 <!-- includes/{{s.block}} -->
-{% assign imgs 		= s.slices %}
+{% assign imgs 		= s.images %}
 {% assign allBgs 	= '' %}
 {% assign custom 	= s.custom_css | raw %}
 {% assign cssClass	= class | prepend: '.' %}
@@ -13,15 +13,15 @@
 {% if s.no_gutter == true %}{% capture gtr_style %}_no_gutter{% endcapture %}{% endif %}
 
 {% assign pgWdth = '' %}
-{% if s.default_max_width == true %}{% assign pgWdth = 'page-width' %}{% endif %}
+{% if s.default_max-width == true %}{% assign pgWdth = 'page-width' %}{% endif %}
 
 {% assign mxWdth = '' %}
-{% if s.custom_max_width == true %}{% capture mxWdth %} style="max-width:{{s.custom_max_width}};" {% endcapture %}{% endif %}
+{% if s.custom_max-width == true %}{% capture mxWdth %} style="max-width:{{s.custom_max_width}};" {% endcapture %}{% endif %}
 
 <div 
 	class="grid-group {{class}}" id="{{sectionID}}">
-	<div class="grid{{gtr_style}} ">
-		<div class="{{pgWdth}}" {{mxWdth}}>
+	<div class="{{pgWdth}}" {{mxWdth}}>
+		<div class="grid{{gtr_style}} ">
 			<!--replace_{{grpHnd}}-->
 		</div>
 	</div>

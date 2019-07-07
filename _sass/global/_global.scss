@@ -54,13 +54,16 @@ body.locked {
 	@include visually-hidden();
 }
 
+.bg_image,
 .background-image {
 	min-height:100px;
-	background-repeat:no-repeat;
-	background-size:cover;
-	background-position:center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: block;
 }
 
+.squared,
 .square {
 	@include squared();
 }

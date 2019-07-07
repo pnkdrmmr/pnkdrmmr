@@ -43,7 +43,7 @@ blocks:
 - template: slider
   block: blocks/slider
   widths:
-    large_width: 100%
+    large_width: 50% (1/2)
     medium_width: 100%
     small_width: 100%
     hide_large: false
@@ -65,8 +65,8 @@ blocks:
       max-width: 500px;
       }
     text_color: "#FFFFFF"
-    overlay_color: "#F5A623"
-    opacity: '75'
+    overlay_color: "#6A0D83"
+    opacity: '6'
     button_text: ''
     button_url: ''
   set_height: false

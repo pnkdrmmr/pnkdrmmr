@@ -7,6 +7,14 @@
 {% assign custom 	= s.custom_css | raw %}
 {% assign cssClass	= class | prepend: '.' %}
 {% assign cssLoop 	= custom | replace: '==', cssClass | replace: ';', ' !important;' %}
+
+{% case imgs.size %}
+    {% when 1 %}{%- assign width = '' -%}
+    {% when 2 %}{%- assign width = 'large-up--one-half' -%}
+    {% when 4 or 7 or 8 %}{%- assign width = 'medium--one-half large-up--one-quarter' -%}
+    {% else %}{%- assign width = 'large-up--one-third' -%}
+{% endcase %}
+
 <div 
 	class="post-gallery {{class}}" id="{{sectionID}}">
 	{% if s.title %}
@@ -19,31 +27,13 @@
 			{% capture sld_Num %}slide-{{forloop.index}}{% endcapture %}
 			{% capture sld_css %}.{{class}} .{{sld_Num}}{% endcapture %}
 
-			<div class="grid__item one-half large-up--one-quarter">
-				<a rel="{{sectionID}}" title="{{ img.caption_title }}" href="{{ img.image | relative_url }}" class="background-image squared {{ sld_Num }}"></a>
-			</div>
 
-			{% comment %}{% case forloop.index %}
-				{% when 1 %}{% assign width = 'large-up--six-twelfths' %}
-				{% when 2 %}{% assign width = 'medium--one-half large-up--five-twelfths' %}
-				{% when 3 %}{% assign width = 'medium--one-half large-up--four-twelfths' %}
-			{% endcase %}
-			{% assign url = '' %}{% if img.url != blank %}{% assign url = img.url %}{% elsif img.custom_url != blank %}{% assign url = img.custom_url %}{% endif %}
-			{% assign el = 'div' %}{% assign attr = '' %}{% if url != blank %}{% assign el = 'a' %}{% capture attr %} href="{{url}}" {% endcapture %}{% endif %}
-			<div class="grid__item {{width}}">
-				<{{el}} {{attr}} class=" background-image {{sld_Num}}">
-					<div class="info">
-						<h2>{{img.title}}</h2>
-						{% if img.text %}
-							<div class="text-slide">
-								<span>{{img.text}}</span>
-							</div>
-						{% endif %}
-					</div>
-				</{{el}}>
-			</div>{% endcomment %}
+
+			<div class="grid__item one-half {{width}}">
+				<a rel="{{sectionID}}" title="{{ img.caption }}" href="{{ img.image | relative_url }}" class="bg_image squared {{ sld_Num }}"></a>
+			</div>
 			{% capture bgImg %}
-			{{sld_css}}::before {
+			{{sld_css}} {
 				background-image: url({{img.image}});
 			}
 			{% endcapture %}
@@ -57,7 +47,7 @@
 	</style>
 	<script type="text/javascript">
 		$(document).ready(function () {
-			$('.{{imagesClass}} .background-image').simpleLightbox({
+			$('.{{class}} .bg_image').simpleLightbox({
 				captions: true,
 				captionSelector: 'self',
 				// rel: true,
