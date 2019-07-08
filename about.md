@@ -79,7 +79,7 @@ blocks:
 - template: block-text
   block: blocks/text
   widths:
-    large_width: 25% (1/4)
+    large_width: 75% (3/4)
     medium_width: 66% (2/3)
     small_width: 100%
     hide_large: false
