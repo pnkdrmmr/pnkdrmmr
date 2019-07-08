@@ -13,13 +13,14 @@ fields:
   type: blocks
   label: Blocks
   template_types:
-  - slider
+  - block-grid-group
   - block-content
+  - block-text
+  - slider
   - block-slices
   - block-gradient-hero
-  - block-text
-  - block-grid-group
   - block-gallery
+  - block-video
   - block-spacer
   config:
     min: 
