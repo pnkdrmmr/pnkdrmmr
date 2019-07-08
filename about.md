@@ -54,7 +54,7 @@ blocks:
     margin-top: 30px;
     margin-bottom: -30px;
     }
-    == .grid .grid__item {
+    == .grid > .grid__item {
     margin-bottom: 30px;
     }
   no_gutter: false
