@@ -22,6 +22,11 @@ fields:
   config:
     maxSize: 250
   label: Image
+- name: blend
+  type: text
+  config:
+    required: false
+  label: Mix Blend Mode
 - name: image_position
   type: text
   config:
