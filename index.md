@@ -7,21 +7,22 @@ blocks:
 - template: block-slices
   block: blocks/slices
   slices:
-  - image: "/uploads/2018/02/17/bridge3.jpg"
-    title: Little Miss
+  - image: "/uploads/2019/07/austin-2.jpg"
+    title: Videos
     url: []
     custom_url: ''
-    text: Caint be wrong
-  - image: "/uploads/2018/02/17/building.jpg"
-    title: Here we<br/>go again
-    text: Going down the only road weve ever known
+    text: ''
+  - image: "/uploads/2019/07/hero.jpg"
+    title: About Me
+    text: ''
     url: []
     custom_url: ''
-  - image: "/uploads/2018/12/07/compass.jpg"
-    title: Intergalactic<br/>Planetary
-    text: Intergalactic
+  - image: "/uploads/2019/07/IMG_1970.jpeg"
+    title: Book Me
+    text: How can I help?
     url: []
     custom_url: ''
+  custom_css: ''
 - template: slider
   block: blocks/slider
   image:
@@ -40,6 +41,14 @@ blocks:
   set_height: false
   height_desktop: ''
   height_mobile: ''
+  assign_to_group: ''
+  widths:
+    large_width: ''
+    hide_large: false
+    medium_width: ''
+    hide_medium: false
+    small_width: ''
+    hide_small: false
 menu:
   navigation:
     identifier: _index
