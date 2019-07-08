@@ -209,6 +209,5 @@ menu:
   navigation:
     identifier: _posts
     weight: 2
-    title: About Me
 
 ---
