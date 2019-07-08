@@ -73,8 +73,8 @@ blocks:
     title: ''
     button_text: ''
     button_url: ''
-  set_height: false
-  height_desktop: ''
+  set_height: true
+  height_desktop: 50vh
   height_mobile: ''
 menu:
   navigation:
