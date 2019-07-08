@@ -1,0 +1,26 @@
+{% assign s = section %}
+{% capture class %}{{s.template}}-{{forloop.index}}{% endcapture %}
+{% capture sectionID %}section-{{class}}{% endcapture %}
+<!-- includes/{{s.block}} -->
+{% assign custom 	= s.custom_css | raw %}
+{% assign cssClass	= class | prepend: '.' %}
+{% assign cssLoop 	= custom | replace: '==', cssClass | replace: ';', ' !important;' %}
+{% comment %}{% assign ttl 		= s.title %}
+{% assign rte 		= s.text %}
+{% assign btn_txt 	= s.button_text %}
+{% assign btn_url 	= s.button_url %}{% endcomment %}
+
+<div class="spacer-block {{class}}" id="{{sectionID}}">
+{% comment %}	{% if ttl.size > 0 %}
+		<h2 class="post-title">{{ ttl }}</h2>
+	{% endif %}
+	{% if rte.size > 0 %}
+		<div class="rte">{{rte}}</div>
+	{% endif %}
+	{% if btn_txt.size > 0 and btn_url.size > 0 %}
+		<a class="btn" href="{{btn_url}}">{{btn_txt}}</a>
+	{% endif %}{% endcomment %}
+	<style type="text/css">
+		{{cssLoop}}
+	</style>
+</div>

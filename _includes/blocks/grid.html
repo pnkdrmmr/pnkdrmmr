@@ -9,20 +9,11 @@
 {% assign cssLoop 	= custom | replace: '==', cssClass | replace: ';', ' !important;' %}
 {% assign grpHnd 	= s.group_title | handleize %}
 
-{% assign gtr_style = '' %}
-{% if s.no_gutter == true %}{% capture gtr_style %}_no_gutter{% endcapture %}{% endif %}
-
-{% assign grd_hrz_aln = '' %}
-{% if s.grid_horizontal_align != blank %}{% assign grd_hrz_aln = s.grid_horizontal_align | downcase | prepend: 'text-' %}{% endif %}
-
-{% assign grd_vrt_aln = '' %}
-{% if s.grid_vertical_align != blank %}{% assign grd_vrt_aln = s.grid_vertical_align | downcase | prepend: 'vert-' %}{% endif %}
-
-{% assign pgWdth = '' %}
-{% if s.default_max-width == true %}{% assign pgWdth = 'page-width' %}{% endif %}
-
-{% assign mxWdth = '' %}
-{% if s.custom_max-width == true %}{% capture mxWdth %} style="max-width:{{s.custom_max_width}};" {% endcapture %}{% endif %}
+{% assign gtr_style = '' %}{% if s.no_gutter == true %}{% capture gtr_style %}_no_gutter{% endcapture %}{% endif %}
+{% assign grd_hrz_aln = '' %}{% if s.grid_horizontal_align != blank %}{% assign grd_hrz_aln = s.grid_horizontal_align | downcase | prepend: 'text-' %}{% endif %}
+{% assign grd_vrt_aln = '' %}{% if s.grid_vertical_align != blank %}{% assign grd_vrt_aln = s.grid_vertical_align | downcase | prepend: 'vert-' %}{% endif %}
+{% assign pgWdth = '' %}{% if s.default_max-width == true %}{% assign pgWdth = 'page-width' %}{% endif %}
+{% assign mxWdth = '' %}{% if s.custom_max-width.size > 0 %}{% capture mxWdth %} style="max-width:{{s.custom_max-width}};" {% endcapture %}{% endif %}
 
 <div 
 	class="grid-group {{class}}" id="{{sectionID}}">

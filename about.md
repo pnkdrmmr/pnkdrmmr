@@ -27,6 +27,9 @@ blocks:
     == h2 {
     text-shadow:0px 0px 5px rgba(0,0,0,0.85);
     }
+    == .page-width {
+    max-width: 1200px;
+    }
     == .gradient-1 {
     top: 50%;
     left: 50%;
@@ -56,7 +59,7 @@ blocks:
 - template: block-text
   block: blocks/text
   widths:
-    large_width: 25% (1/4)
+    large_width: 33% (1/3)
     medium_width: 33% (1/3)
     small_width: 100%
     hide_large: false
@@ -79,7 +82,7 @@ blocks:
 - template: block-text
   block: blocks/text
   widths:
-    large_width: 75% (3/4)
+    large_width: 66% (2/3)
     medium_width: 66% (2/3)
     small_width: 100%
     hide_large: false
@@ -126,7 +129,7 @@ blocks:
 - template: block-text
   block: blocks/text
   widths:
-    large_width: 25% (1/4)
+    large_width: 33% (1/3)
     medium_width: 33% (1/3)
     small_width: 100%
     hide_large: false
@@ -149,7 +152,7 @@ blocks:
 - template: block-text
   block: blocks/text
   widths:
-    large_width: 75% (3/4)
+    large_width: 66% (2/3)
     medium_width: 66% (2/3)
     small_width: 100%
     hide_large: false
