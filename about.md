@@ -27,7 +27,7 @@ blocks:
     == h2 {
     text-shadow:0px 0px 5px rgba(0,0,0,0.85);
     }
-    == .gradient {
+    == .gradient-1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%) rotate(45deg);
@@ -41,7 +41,7 @@ blocks:
   block: blocks/grid
   group_title: Main Group
   default_max-width: true
-  custom_max-width: ''
+  custom_max-width: 1200px
   custom_css: ''
   no_gutter: false
   grid_vertical_align: Top
@@ -49,7 +49,7 @@ blocks:
 - template: block-text
   block: blocks/text
   widths:
-    large_width: 50% (1/2)
+    large_width: 25% (1/4)
     medium_width: 33% (1/3)
     small_width: 100%
     hide_large: false
@@ -72,7 +72,7 @@ blocks:
 - template: block-text
   block: blocks/text
   widths:
-    large_width: 50% (1/2)
+    large_width: 25% (1/4)
     medium_width: 66% (2/3)
     small_width: 100%
     hide_large: false
@@ -115,7 +115,7 @@ blocks:
 - template: block-text
   block: blocks/text
   widths:
-    large_width: 50% (1/2)
+    large_width: 25% (1/4)
     medium_width: 33% (1/3)
     small_width: 100%
     hide_large: false
@@ -138,7 +138,7 @@ blocks:
 - template: block-text
   block: blocks/text
   widths:
-    large_width: 50% (1/2)
+    large_width: 75% (3/4)
     medium_width: 66% (2/3)
     small_width: 100%
     hide_large: false
