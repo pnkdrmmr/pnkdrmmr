@@ -65,7 +65,7 @@ blocks:
     and I don't want this thing smelling like fish. I'm a monster. Oh, you're gonna
     be in a coma, all right. Did you enjoy your meal, Mom? You drank it fast enough.
     That's what it said on 'Ask Jeeves.'</p>
-  title: ''
+  title: It started as a screenname
   button_text: ''
   button_url: ''
   custom_css: ''
