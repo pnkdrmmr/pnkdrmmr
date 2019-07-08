@@ -28,8 +28,8 @@ blocks:
   custom_max-width: ''
   custom_css: ''
   no_gutter: false
-  grid_vertical_align: Middle
-  grid_horizontal_align: Right
+  grid_vertical_align: Top
+  grid_horizontal_align: Center
 - template: block-text
   block: blocks/text
   widths:
