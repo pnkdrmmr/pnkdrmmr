@@ -103,26 +103,13 @@ blocks:
   button_text: ''
   button_url: ''
   custom_css: ''
-- template: block-spacer
-  block: blocks/spacer
-  widths:
-    large_width: 100%
-    large_horizontal_align: Left
-    medium_width: 100%
-    medium_horizontal_align: Left
-    small_width: 100%
-    small_horizontal_align: Left
-    hide_large: false
-    hide_medium: false
-    hide_small: false
-  min-height: ''
 - template: block-video
   block: blocks/video
   assign_to_group: Main Group
   widths:
-    large_width: 70% (7/10)
+    large_width: 80% (8/10)
     large_horizontal_align: Center
-    medium_width: 70% (7/10)
+    medium_width: 80% (8/10)
     medium_horizontal_align: Center
     small_width: 100%
     small_horizontal_align: Center
@@ -132,19 +119,6 @@ blocks:
   title: Vetter Kids - Chlorine Dream
   video_url: https://youtu.be/FEjwZtHLBns
   custom_css: ''
-- template: block-spacer
-  block: blocks/spacer
-  widths:
-    large_width: 100%
-    large_horizontal_align: Left
-    medium_width: 100%
-    medium_horizontal_align: Left
-    small_width: 100%
-    small_horizontal_align: Left
-    hide_large: false
-    hide_medium: false
-    hide_small: false
-  min-height: ''
 - template: block-text
   block: blocks/text
   widths:
