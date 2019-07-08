@@ -15,6 +15,9 @@ blocks:
     hide_large: false
     hide_medium: false
     hide_small: false
+    large_horizontal_align: ''
+    medium_horizontal_align: ''
+    small_horizontal_align: ''
   title: about<br>pnkdrmmr
   image: "/uploads/2019/07/IMG_1970.jpeg"
   image_position: center bottom
@@ -43,6 +46,9 @@ blocks:
     hide_large: false
     hide_medium: false
     hide_small: false
+    large_horizontal_align: Right
+    medium_horizontal_align: Right
+    small_horizontal_align: Left
   assign_to_group: Main Group
   title: the dude
   custom_css: ''
@@ -58,6 +64,9 @@ blocks:
     hide_large: false
     hide_medium: false
     hide_small: false
+    large_horizontal_align: Left
+    medium_horizontal_align: Left
+    small_horizontal_align: Left
   assign_to_group: Main Group
   text: <p><br>What's Spanish for "I know you speak English?" Army had half a day.
     Say goodbye to these, because it's the last time! Not tricks, Michael, illusions.
@@ -73,6 +82,21 @@ blocks:
   button_text: ''
   button_url: ''
   custom_css: ''
+- template: block-video
+  block: blocks/video
+  widths:
+    large_width: 70% (7/10)
+    large_horizontal_align: Center
+    medium_width: 70% (7/10)
+    medium_horizontal_align: Center
+    small_width: 100%
+    small_horizontal_align: Center
+    hide_large: false
+    hide_medium: false
+    hide_small: false
+  title: Vetter Kids - Chlorine Dream
+  video_url: https://youtu.be/FEjwZtHLBns
+  custom_css: ''
 - template: block-text
   block: blocks/text
   widths:
@@ -82,6 +106,9 @@ blocks:
     hide_large: false
     hide_medium: false
     hide_small: false
+    large_horizontal_align: Right
+    medium_horizontal_align: Right
+    small_horizontal_align: Left
   assign_to_group: Main Group
   title: the gear
   text: ''
@@ -97,6 +124,9 @@ blocks:
     hide_large: false
     hide_medium: false
     hide_small: false
+    large_horizontal_align: Left
+    medium_horizontal_align: Left
+    small_horizontal_align: Left
   assign_to_group: Main Group
   text: "<p>Steve Holt! I've opened a door here that I regret. We just call it a sausage.
     There's so many poorly chosen words in that sentence. Really? Did nothing cancel?</p><p>Now,
