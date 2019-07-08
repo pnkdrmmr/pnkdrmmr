@@ -9,6 +9,11 @@ fields:
   label: Block
   hidden: true
   default: blocks/video
+- name: assign_to_group
+  type: text
+  config:
+    required: false
+  label: Assign to Group
 - name: title
   type: text
   config:

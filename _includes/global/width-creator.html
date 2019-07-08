@@ -5,9 +5,9 @@
 {% assign hide_medium = '' %}{% if sw.hide_medium == true %}{% assign hide_tablet = 'medium--hide' %}{% endif %}
 {% assign hide_large = '' %}{% if sw.hide_large == true %}{% assign hide_desktop = 'large-up--hide' %}{% endif %}
 
-{% assign lg_hrz_aln = '' %}{% if sw.large_horizontal_align %}{% assign lg_hrz_aln = sw.large_horizontal_align %}{% endif %}
-{% assign md_hrz_aln = '' %}{% if sw.medium_horizontal_align %}{% assign md_hrz_aln = sw.medium_horizontal_align %}{% endif %}
-{% assign sm_hrz_aln = '' %}{% if sw.small_horizontal_align %}{% assign sm_hrz_aln = sw.small_horizontal_align %}{% endif %}
+{% assign lg_hrz_aln = '' %}{% if sw.large_horizontal_align %}{% assign lg_hrz_aln = sw.large_horizontal_align | downcase | prepend: 'large-up--text-' %}{% endif %}
+{% assign md_hrz_aln = '' %}{% if sw.medium_horizontal_align %}{% assign md_hrz_aln = sw.medium_horizontal_align | downcase | prepend: 'medium--text-' %}{% endif %}
+{% assign sm_hrz_aln = '' %}{% if sw.small_horizontal_align %}{% assign sm_hrz_aln = sw.small_horizontal_align | downcase | prepend: 'small--text-' %}{% endif %}
 
 
 {% assign smWdth = sw.small_width | split: ' ' | first %}

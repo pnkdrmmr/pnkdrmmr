@@ -2,62 +2,50 @@
 {% capture class %}{{s.template}}-{{forloop.index}}{% endcapture %}
 {% capture sectionID %}section-{{class}}{% endcapture %}
 <!-- includes/{{s.block}} -->
-{% comment %}{% assign imgs 		= s.images %}
-{% assign allBgs 	= '' %}
+{% assign vid_url 		= s.video_url %}
 {% assign custom 	= s.custom_css | raw %}
 {% assign cssClass	= class | prepend: '.' %}
 {% assign cssLoop 	= custom | replace: '==', cssClass | replace: ';', ' !important;' %}
 
-{% case imgs.size %}
-    {% when 1 %}{%- assign width = '' -%}
-    {% when 2 %}{%- assign width = 'large-up--one-half' -%}
-    {% when 4 or 7 or 8 %}{%- assign width = 'medium--one-half large-up--one-quarter' -%}
-    {% else %}{%- assign width = 'large-up--one-third' -%}
-{% endcase %}
-
 <div 
-	class="post-gallery {{class}}" id="{{sectionID}}">
+	class="video-section {{class}}" id="{{sectionID}}">
 	{% if s.title %}
 		<div class="section-title">
-			<h3>{{ s.title }}</h3>
+			<h2>{{ s.title }}</h2>
 		</div>
 	{% endif %}
-	<div class="grid ">
-		{% for img in imgs %}
-			{% capture sld_Num %}slide-{{forloop.index}}{% endcapture %}
-			{% capture sld_css %}.{{class}} .{{sld_Num}}{% endcapture %}
 
-
-
-			<div class="grid__item one-half {{width}}">
-				<a rel="{{sectionID}}" title="{{ img.caption }}" href="{{ img.image | relative_url }}" class="bg_image squared {{ sld_Num }}"></a>
-			</div>
-			{% capture bgImg %}
-			{{sld_css}} {
-				background-image: url({{img.image}});
-			}
-			{% endcapture %}
-			{% assign allBgs = allBgs | append: bgImg %}
-		{% endfor %}
-	</div>
 	<style type="text/css">
 		{{allBgs}}
 		
 		{{cssLoop}}
 	</style>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$('.{{class}} .bg_image').simpleLightbox({
-				captions: true,
-				captionSelector: 'self',
-				// rel: true,
-				captionType: 'attr',
-				captionsData: 'title',
-				captionPosition: 'bottom'
-			});
-		})
-	</script>
-</div>{% endcomment %}
-
-
+	<div class="video-ratio">
+		<div class="wrapper">
+			{% if vid_url contains "youtu" %}
+				{% assign vid_url = vid_url | split: '/' | last %}
+		        <iframe
+		        	class="iframe-video full-width"
+		        	src="https://www.youtube.com/embed/{{ vid_url }}"
+		        	width="800"
+		        	height="480"
+		        	allow="autoplay"
+		        	frameborder="0"
+		        	allowfullscreen></iframe>
+	    	{% elsif vid_url contains "vimeo" %}
+				{% assign vid_url = vid_url | split: '/' | last %}
+		        <iframe
+		        	class="iframe-video full-width"
+		        	id="vid{{block.id}}"
+		        	src="//player.vimeo.com/video/{{ vid_url }}?byline=0&title=0"
+		        	width="800"
+		        	height="480"
+					frameborder="0"
+					webkitallowfullscreen
+					mozallowfullscreen
+					allowfullscreen></iframe>
+	    	{% endif %}
+	    </div>
+	</div>
+</div>
 

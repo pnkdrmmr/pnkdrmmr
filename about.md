@@ -27,6 +27,15 @@ blocks:
     == h2 {
     text-shadow:0px 0px 5px rgba(0,0,0,0.85);
     }
+    == .gradient {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    width: 100%;
+    height: 300%;
+    flex-direction: row;
+    opacity: 0.99;
+    }
   blend: Lighten
 - template: block-grid-group
   block: blocks/grid
@@ -46,12 +55,17 @@ blocks:
     hide_large: false
     hide_medium: false
     hide_small: false
-    large_horizontal_align: Right
-    medium_horizontal_align: Right
+    large_horizontal_align: Left
+    medium_horizontal_align: Left
     small_horizontal_align: Left
   assign_to_group: Main Group
   title: the dude
-  custom_css: ''
+  custom_css: |-
+    @media screen and (min-width:750px) {
+    == h2 {
+    font-size: 3.75em;
+    }
+    }
   text: ''
   button_text: ''
   button_url: ''
@@ -84,6 +98,7 @@ blocks:
   custom_css: ''
 - template: block-video
   block: blocks/video
+  assign_to_group: Main Group
   widths:
     large_width: 70% (7/10)
     large_horizontal_align: Center
@@ -106,15 +121,20 @@ blocks:
     hide_large: false
     hide_medium: false
     hide_small: false
-    large_horizontal_align: Right
-    medium_horizontal_align: Right
+    large_horizontal_align: Left
+    medium_horizontal_align: Left
     small_horizontal_align: Left
   assign_to_group: Main Group
   title: the gear
   text: ''
   button_text: ''
   button_url: ''
-  custom_css: ''
+  custom_css: |-
+    @media screen and (min-width:750px) {
+    == h2 {
+    font-size: 3.75em;
+    }
+    }
 - template: block-text
   block: blocks/text
   widths:
