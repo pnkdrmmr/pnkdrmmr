@@ -19,21 +19,6 @@
 			position: relative;
 		}
 	}
-	&.vert-top {
-		& > .grid__item {
-			vertical-align: top;
-		}
-	}
-	&.vert-middle {
-		& > .grid__item {
-			vertical-align: middle;
-		}
-	}
-	&.vert-bottom {
-		& > .grid__item {
-			vertical-align: bottom;
-		}
-	}
 }
 .grid_no_gutter {
 	@include clearfix();
@@ -48,6 +33,21 @@
 }
 .grid__item {
 	width: 100%;
+}
+.vert-top {
+	& > .grid__item {
+		vertical-align: top;
+	}
+}
+.vert-middle {
+	& > .grid__item {
+		vertical-align: middle;
+	}
+}
+.vert-bottom {
+	& > .grid__item {
+		vertical-align: bottom;
+	}
 }
 
 /*============================================================================

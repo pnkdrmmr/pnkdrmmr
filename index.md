@@ -28,7 +28,7 @@ blocks:
   grid_vertical_align: Middle
   grid_horizontal_align: Center
   group_title: Main Group
-  no_gutter: false
+  no_gutter: true
   default_max-width: false
   custom_max-width: ''
   custom_css: ''
@@ -36,7 +36,7 @@ blocks:
   block: blocks/text
   widths:
     large_width: 50% (1/2)
-    large_horizontal_align: Center
+    large_horizontal_align: Left
     medium_width: 33% (1/3)
     medium_horizontal_align: Left
     small_width: 100%
@@ -50,7 +50,15 @@ blocks:
     if required the Click)</h6>"
   button_text: ''
   button_url: ''
-  custom_css: ''
+  custom_css: |-
+    == {
+    max-width:500px;
+    margin:0 auto;
+    }
+    == h2 {
+    font-family: Butler,serif;
+    font-size: 4em;
+    }
 - template: slider
   block: blocks/slider
   widths:

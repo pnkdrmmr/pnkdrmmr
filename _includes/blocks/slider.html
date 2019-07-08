@@ -35,11 +35,7 @@
 		{% comment %} Colors {% endcomment %}
 		{% assign txt_clr	= img.text_color %}
 		{% assign bg_clr	= img.overlay_color %}
-		{% assign op		= img.opacity | times: 0.01 %}
-		{% comment %} Positioning {% endcomment %}
-		
-		
-		
+		{% assign op		= img.opacity | times: 0.01 %}	
 		{% comment %} Start CSS {% endcomment %}
 		{% capture startCSS %}
 			/* Slide #{{loop}} */
@@ -66,15 +62,19 @@
 		{% else %}
 			{% capture bgImgCSS %}
 				{{cssClass}} {
-					background-image: url({{main_image}});
+					background-image: url({{main_img}});
+					height: {{hght_desk}};
 				}
-				{% if mob_img != '' %}
 				@media screen and (max-width: 750px) {
 					{{cssClass}} {
-						background-image: url({{mob_image}});
+						{% if mob_img != '' %}
+						background-image: url({{mob_img}});
+						{% endif %}
+						{% if hght_mob.size > 0 %}
+						height: {{hght_mob}};
+						{% endif %}
 					}
 				}
-				{% endif %}
 			{% endcapture %}
 			{% assign slideCSS = slideCSS | append: bgImgCSS %}
 		{% endif %}
