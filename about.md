@@ -20,10 +20,14 @@ blocks:
     small_horizontal_align: ''
   title: about<br>pnkdrmmr
   image: "/uploads/2019/07/IMG_1970.jpeg"
-  image_position: center bottom
+  image_position: center 70%
   show_page_info: false
   image_size: ''
   custom_css: |-
+    == {
+    height: 50vh;
+    }
+
     == h2 {
     text-shadow:0px 0px 5px rgba(0,0,0,0.85);
     }
@@ -37,7 +41,7 @@ blocks:
     width: 100%;
     height: 300%;
     flex-direction: row;
-    opacity: 0.99;
+    opacity: 1;
     }
   blend: Lighten
 - template: block-grid-group
