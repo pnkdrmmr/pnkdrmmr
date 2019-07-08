@@ -74,7 +74,7 @@
 	// Body text
 	// ----------
 		p {
-			margin: 0 0 $bodyLineHeight / 2;
+			margin: 0 0 ($bodyLineHeight * 1em );
 			line-height:$bodyLineHeight;
 			color:$bodyTextColor;
 			font-size:$bodyFontSize;

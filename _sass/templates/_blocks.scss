@@ -152,8 +152,8 @@
 		left:5%;
 		width:90%;
 		z-index:2;
-		@media screen and (min-width:$grid-medium ) {
-			left:0%;
+		@media screen and (min-width:$grid-medium) {
+			left:5%;
 			top:50%;
 			bottom: initial;
 			width:50%;
@@ -196,7 +196,7 @@
 		max-width: 100%;
 	}
 	@include media-query($small) {
-		padding: 1em;
+		padding: 1em 1em 0;
 		h2 {
 			font-size: 1.25em;
 		}

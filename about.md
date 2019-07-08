@@ -25,9 +25,13 @@ blocks:
   image_size: ''
   custom_css: |-
     == {
+    height: 35vh;
+    }
+    @media screen and (min-width:750px) {
+    == {
     height: 50vh;
     }
-
+    }
     == h2 {
     text-shadow:0px 0px 5px rgba(0,0,0,0.85);
     }
@@ -50,12 +54,14 @@ blocks:
   default_max-width: true
   custom_max-width: 1200px
   custom_css: |-
+    @media screen and (min-width:750px) {
     == .grid {
     margin-top: 30px;
     //margin-bottom: -30px;
     }
     == .grid > .grid__item {
     margin-bottom: 30px;
+    }
     }
   no_gutter: false
   grid_vertical_align: Top
@@ -79,6 +85,10 @@ blocks:
     == h2 {
     font-size: 3.75em;
     }
+    }
+    == h2 {
+    font-size: 2.5em;
+    margin: 0 0 0.25em;
     }
   text: ''
   button_text: ''
@@ -152,6 +162,10 @@ blocks:
     == h2 {
     font-size: 3.75em;
     }
+    }
+    == h2 {
+    font-size: 2.5em;
+    margin: 0 0 0.25em;
     }
 - template: block-text
   block: blocks/text

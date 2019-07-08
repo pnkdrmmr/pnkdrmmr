@@ -45,19 +45,37 @@ blocks:
     hide_medium: false
     hide_small: false
   assign_to_group: Main Group
-  title: Always on Time
+  title: Always on <span>Time</span>
   text: "<p><strong>For Practice, the Show, the Studio,<br>with the Bass Player</strong></p><h6>(and
     if required the Click)</h6>"
   button_text: ''
   button_url: ''
   custom_css: |-
     == {
-    max-width:500px;
+    max-width:650px;
     margin:0 auto;
     }
     == h2 {
     font-family: Butler,serif;
-    font-size: 4em;
+    font-size: 4.25em;
+    margin: 0 0 0.15em;
+    }
+    == h2 span {
+    background: #ee5c6c;
+    background: linear-gradient(145deg,#ee5c6c,#6a0d83);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+    == .rte {
+    font-size: 1.6em;
+    }
+    == p {
+    margin: 0 0 0.25em;
+    }
+    == h6 {
+    margin: 0.1em 0 0;
+    font-size: 0.6em;
+    font-weight: 100;
     }
 - template: slider
   block: blocks/slider
