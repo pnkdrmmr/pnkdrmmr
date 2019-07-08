@@ -118,7 +118,11 @@ blocks:
     hide_small: false
   title: Vetter Kids - Chlorine Dream
   video_url: https://youtu.be/FEjwZtHLBns
-  custom_css: ''
+  custom_css: |-
+    == {
+    max-width: 800px;
+    margin: 0 auto;
+    }
 - template: block-text
   block: blocks/text
   widths:
