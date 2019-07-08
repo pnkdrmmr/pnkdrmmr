@@ -8,10 +8,10 @@ blocks:
   block: blocks/slices
   slices:
   - image: "/uploads/2019/07/austin-2.jpg"
-    title: Videos
+    title: Under Construction
     url: []
     custom_url: ''
-    text: ''
+    text: I'm in the process of fiddlin. Brb.
   - image: "/uploads/2019/07/hero.jpg"
     title: About Me
     text: ''
