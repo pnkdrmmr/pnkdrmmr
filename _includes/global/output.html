@@ -1,5 +1,5 @@
 <!-- includes/blocks/output -->
-{% assign pageData = page | jsonify | strip_html | replace: "'", '&apos;' | replace: '\n', '' %}
+{% assign pageData = page | jsonify | strip_html | replace: "'", '&apos;' | replace: '\n', '' | replace: '\"', '' %}
 {% if html == true %}
 	<div class="jsonContainer">
 		<pre id="json" style="">

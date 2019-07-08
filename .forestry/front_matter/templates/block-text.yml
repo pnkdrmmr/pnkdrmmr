@@ -100,6 +100,21 @@ fields:
         file: 
         path: 
     label: Large Width
+  - name: large_horizontal_align
+    type: select
+    default: Left
+    config:
+      required: false
+      options:
+      - Left
+      - Center
+      - Right
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Large Horizontal Align
   - name: hide_large
     type: boolean
     label: Hide Large
@@ -152,6 +167,21 @@ fields:
         file: 
         path: 
     label: Medium Width
+  - name: medium_horizontal_align
+    type: select
+    default: Left
+    config:
+      required: false
+      options:
+      - Left
+      - Center
+      - Right
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Medium Horizontal Align
   - name: hide_medium
     type: boolean
     label: Hide Medium
@@ -204,6 +234,21 @@ fields:
         file: 
         path: 
     label: Small Width
+  - name: small_horizontal_align
+    type: select
+    default: Left
+    config:
+      required: false
+      options:
+      - Left
+      - Center
+      - Right
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Small Horizontal Align
   - name: hide_small
     type: boolean
     label: Hide Small

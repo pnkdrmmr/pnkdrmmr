@@ -11,13 +11,13 @@
 {% assign btn_url 	= s.button_url %}
 
 <div class="text-block {{class}}" id="{{sectionID}}">
-	{% if ttl != blank %}
+	{% if ttl %}
 		<h2 class="post-title">{{ ttl }}</h2>
 	{% endif %}
-	{% if rte != blank %}
+	{% if rte %}
 		<div class="rte">{{rte}}</div>
 	{% endif %}
-	{% if btn_txt != blank and btn_url != blank %}
+	{% if btn_txt and btn_url %}
 		<a class="btn" href="{{btn_url}}">{{btn_txt}}</a>
 	{% endif %}
 	<style type="text/css">
