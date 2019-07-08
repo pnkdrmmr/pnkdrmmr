@@ -35,7 +35,7 @@ blocks:
     custom_css: ''
     text_color: "#FFFFFF"
     overlay_color: "#000000"
-    opacity: "66"
+    opacity: '66'
     button_url: ''
   set_height: false
   height_desktop: ''

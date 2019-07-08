@@ -205,5 +205,10 @@ blocks:
   title: ''
   custom_css: ''
 layout: custom-page
+menu:
+  navigation:
+    identifier: _posts
+    weight: 2
+    title: About Me
 
 ---
