@@ -21,6 +21,7 @@ blocks:
   show_page_info: false
   image_size: ''
   custom_css: ''
+  blend: Lighten
 - template: block-grid-group
   block: blocks/grid
   group_title: Main Group
