@@ -36,5 +36,5 @@ fields:
   default: now
   hidden: true
 pages:
-- about.md
 - index.md
+- about.md

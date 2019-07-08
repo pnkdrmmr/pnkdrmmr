@@ -28,7 +28,7 @@ blocks:
   grid_vertical_align: Middle
   grid_horizontal_align: Center
   group_title: Main Group
-  no_gutter: true
+  no_gutter: false
   default_max-width: false
   custom_max-width: ''
   custom_css: ''
