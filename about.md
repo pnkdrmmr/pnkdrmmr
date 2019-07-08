@@ -42,7 +42,14 @@ blocks:
   group_title: Main Group
   default_max-width: true
   custom_max-width: 1200px
-  custom_css: ''
+  custom_css: |-
+    == .grid {
+    margin-top: 30px;
+    margin-bottom: -30px;
+    }
+    == .grid .grid__item {
+    margin-bottom: 30px;
+    }
   no_gutter: false
   grid_vertical_align: Top
   grid_horizontal_align: Center
