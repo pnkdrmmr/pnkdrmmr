@@ -1,4 +1,30 @@
 ---
 label: Block - Video
 hide_body: true
-fields: []
+fields:
+- name: block
+  type: text
+  config:
+    required: false
+  label: Block
+  hidden: true
+  default: blocks/video
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: video_url
+  type: text
+  config:
+    required: false
+  label: Video Url
+- name: custom_css
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Custom CSS
