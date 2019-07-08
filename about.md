@@ -182,6 +182,28 @@ blocks:
   button_text: ''
   button_url: ''
   custom_css: ''
+- template: block-gallery
+  block: blocks/gallery
+  widths:
+    large_width: 100%
+    large_horizontal_align: Left
+    medium_width: 100%
+    medium_horizontal_align: Left
+    small_width: 100%
+    small_horizontal_align: Left
+    hide_large: false
+    hide_medium: false
+    hide_small: false
+  assign_to_group: Main Group
+  images:
+  - image: "/uploads/2019/07/IMG_1969.jpeg"
+    caption: ''
+  - image: "/uploads/2019/07/IMG_1967.jpeg"
+    caption: ''
+  - image: "/uploads/2019/07/IMG_1970.jpeg"
+    caption: ''
+  title: ''
+  custom_css: ''
 layout: custom-page
 
 ---
