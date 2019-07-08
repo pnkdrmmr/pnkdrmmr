@@ -20,7 +20,10 @@ blocks:
   image_position: center bottom
   show_page_info: false
   image_size: ''
-  custom_css: ''
+  custom_css: |-
+    == h2 {
+    text-shadow:0px 0px 5px rgba(0,0,0,0.85);
+    }
   blend: Lighten
 - template: block-grid-group
   block: blocks/grid
