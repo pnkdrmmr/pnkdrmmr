@@ -37,7 +37,7 @@ blocks:
   widths:
     large_width: 50% (1/2)
     large_horizontal_align: Left
-    medium_width: 33% (1/3)
+    medium_width: 100%
     medium_horizontal_align: Left
     small_width: 100%
     small_horizontal_align: Left
@@ -81,7 +81,7 @@ blocks:
   block: blocks/slider
   widths:
     large_width: 50% (1/2)
-    medium_width: 66% (2/3)
+    medium_width: 100%
     small_width: 100%
     hide_large: false
     hide_medium: false
