@@ -25,6 +25,22 @@ fields:
   name: banner_image
   label: Banner Image
   description: Ideal dimensions 2500px by 1200px
+- name: blocks
+  type: blocks
+  label: Blocks
+  template_types:
+  - block-grid-group
+  - block-content
+  - block-text
+  - slider
+  - block-slices
+  - block-gradient-hero
+  - block-gallery
+  - block-video
+  - block-spacer
+  config:
+    min: 
+    max: 
 - type: list
   name: related_posts
   label: Related Posts
