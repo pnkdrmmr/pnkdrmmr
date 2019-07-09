@@ -18,7 +18,7 @@ sections:
   - custom-page
   - landing-page
 - type: document
-  path: _data/hard-menu.yml
+  path: _data/hard-menus.yml
   label: Menu
 - type: document
   path: _data/information.yml
