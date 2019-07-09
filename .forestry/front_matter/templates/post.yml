@@ -7,6 +7,12 @@ fields:
   type: text
   hidden: false
   default: ''
+- name: permalink
+  type: text
+  config:
+    required: false
+  label: Permalink (optional)
+  description: "/your-text/"
 - type: text
   label: Sub Heading
   name: sub_heading
