@@ -6,6 +6,7 @@ sub_heading: Shoegaze
 tags:
 - Album
 - EP
+- Band
 related_posts: []
 banner_image: ''
 blocks:
