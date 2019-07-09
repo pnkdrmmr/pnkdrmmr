@@ -9,21 +9,21 @@ tags:
 related_posts: []
 banner_image: ''
 blocks:
-- template: slider
-  block: blocks/slider
+- template: block-gradient-hero
+  block: blocks/gradient-hero
+  text_color: "#FFFFFF"
+  left_color: "#EE5C6C"
+  right_color: "#6A0D83"
   widths:
     large_width: 100%
+    large_horizontal_align: Left
     medium_width: 100%
+    medium_horizontal_align: Left
     small_width: 100%
-  image:
-  - main_image: "/uploads/2019/07/bi-bg.jpg"
-    text: Shoegaze
-    custom_css: ''
-    text_color: "#FFFFFF"
-    overlay_color: "#000000"
-    title: Brother/Ghost
-  set_height: true
-  height_desktop: 500px
+    small_horizontal_align: Left
+  image: "/uploads/2019/07/bi-bg.jpg"
+  image_position: center 75%
+  show_page_info: true
 - template: block-grid-group
   block: blocks/grid
   grid_vertical_align: Top
