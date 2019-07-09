@@ -20,7 +20,8 @@
                       {% comment %}for link in site.menus.navigation{% endcomment %}
                       {% comment %}site.data.menus.main{% endcomment %}
                       {% comment %}site.menus.navigation{% endcomment %}
-            {% for item in site.menus.navigation %}
+
+            {% for item in site.data.hard-menus.main %}
                 {% assign page_url = page.url | replace: '.html','' %}
                 <li>
                     <a 
