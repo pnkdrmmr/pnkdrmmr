@@ -1,16 +1,34 @@
 ---
-title: Example Draft
+title: Brother / Ghost
 layout: post
-date: 2018-01-19 00:00:00 +0000
-sub_heading: ''
-tags: []
+date: 2018-01-19T00:00:00.000+00:00
+sub_heading: Shoegaze
+tags:
+- Album
+- EP
 related_posts: []
+banner_image: "/uploads/2019/07/bi-bg.jpg"
 
 ---
-## What are draft posts?
+![](/uploads/2019/07/bi-bg.jpg)
 
-This is an example of a draft post. Draft posts aren't included when publishing your site.
+## Black Ice - Brother/Ghost
 
-This is great for authoring work in progress content, or hiding content that shouldn't be available at the current time.
+Recorded at the Recording Conservatory of Austin in Fall 2008.
 
-![](/uploads/2018/02/17/building.jpg)
+Jasper - Guitar, Vocals  
+Sterling - Guitar  
+Micheal/Colby - Bass  
+Austin  - Drums
+
+***
+
+![](/uploads/2019/07/gbs-bs.jpg)
+
+## Buried - Brother/Ghost
+
+Recorded with Paul Clark over 2010 - 2011.
+
+Sterling - Guitar, Vocals  
+Colby - Bass, Vocals  
+Austin  - Drums
