@@ -8,7 +8,7 @@ show_staff: true
 menu:
   navigation:
     identifier: _contact
-    weight: 3
+    weight: 4
 
 ---
 ## Hours of Operation
