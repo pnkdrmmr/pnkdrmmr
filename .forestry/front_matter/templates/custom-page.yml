@@ -28,6 +28,7 @@ fields:
   - block-gallery
   - block-video
   - block-spacer
+  - block-contact-form
   config:
     min: 
     max: 
