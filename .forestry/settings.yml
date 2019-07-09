@@ -4,10 +4,6 @@ auto_deploy: true
 admin_path: "/admin"
 webhook_url: 
 sections:
-- type: document
-  path: _data/hard-menu.yml
-  label: Menu
-  match: "**/*"
 - type: heading
   label: Content
 - type: jekyll-posts
@@ -21,6 +17,9 @@ sections:
   templates:
   - custom-page
   - landing-page
+- type: document
+  path: _data/hard-menu.yml
+  label: Menu
 - type: document
   path: _data/information.yml
   label: Contact Information
