@@ -27,7 +27,7 @@ blocks:
   title: Vetter Kids
   image: "/uploads/2019/07/fullband-1.jpg"
   image_position: center top
-  blend: ''
+  blend: exclusion
   image_size: ''
   custom_css: ''
 - template: block-grid-group
