@@ -54,3 +54,5 @@ fields:
   type: text
   hidden: false
   default: custom-page
+pages:
+- _posts/vetter-kids.md
