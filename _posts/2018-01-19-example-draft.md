@@ -1,6 +1,6 @@
 ---
 title: Brother / Ghost
-layout: post
+layout: custom-page
 date: 2018-01-19T00:00:00.000+00:00
 sub_heading: Shoegaze
 tags:
