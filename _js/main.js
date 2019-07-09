@@ -45,6 +45,8 @@ $(document).ready(function () {
 	    $btn.toggleClass(navActive);
 	    $body.toggleClass(modalOpen);
 	    $body.toggleClass(locked);
+
+	    winWdth = $(window).width();
 	    
 	    isOpen      = $btn.is('.'+navActive);
 	    // Btn Settings
@@ -55,14 +57,17 @@ $(document).ready(function () {
 	    aOp         = isOpen ? 1 : 0,
 	    aWdth       = isOpen ? '100%' : '0%';
 	    // Links
-	    $navLinks.velocity( aTrans,{
-	        width:      aWdth,
-	        maxWidth:   aWdth,
-	        opacity:    aOp,
-	        duration:   aDur,
-	        delay:      aDelay,
-	        stagger:    aStag
-	    })
+
+	    if (winWdth > 750) {
+		    $navLinks.velocity( aTrans,{
+		        width:      aWdth,
+		        maxWidth:   aWdth,
+		        opacity:    aOp,
+		        duration:   aDur,
+		        delay:      aDelay,
+		        stagger:    aStag
+		    })
+	    }
 	}
 
     $btn.click(nav_Open);

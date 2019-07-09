@@ -31,7 +31,7 @@
 		{% comment %} Button {% endcomment %}
 		{% assign btn_txt = '' %}{% if img.button_text != '' %}{% assign btn_txt = img.button_text %}{% endif %}
 		{% assign btn_url = '' %}{% if img.button_text != '' %}{% assign btn_url = img.button_url %}{% endif %}{% if img.custom_button_url != '' %}{% assign btn_url = img.custom_button_url %}{% endif %}
-		{% assign btn = false %}{% if btn_txt != '' and btn_url != blank %}{% assign btn = true %}{% endif %}
+		{% assign btn = false %}{% if btn_txt.size > 0 and btn_url.size > 0 %}{% assign btn = true %}{% endif %}
 		{% comment %} Colors {% endcomment %}
 		{% assign txt_clr	= img.text_color %}
 		{% assign bg_clr	= img.overlay_color %}
@@ -54,7 +54,7 @@
 
 		{% comment %} Capture Image Setups {% endcomment %}
 		{% assign inlineImgs = '' %}
-		{% if set_hght == false %}
+		{% if set_hght != true %}
 			{% capture inlineImgs %}
 				<img class="{% if mob_img != '' %}small--hide{% endif %}" src="{{main_img}}" />
 				{% if mob_img != '' %}<img class="medium-up--hide" src="{{mob_img}}" />{% endif %}

@@ -1,5 +1,6 @@
 ---
-title: Brother / Ghost
+title: Brother/Ghost
+permalink: /brotherghost/
 layout: custom-page
 date: 2018-01-19T00:00:00.000+00:00
 sub_heading: Shoegaze
@@ -31,6 +32,11 @@ blocks:
   grid_horizontal_align: Center
   group_title: Main Group
   default_max-width: true
+  custom_css: |-
+    == .slide img {
+    max-width:450px;
+    margin:2em auto;
+    }
 - template: slider
   block: blocks/slider
   widths:

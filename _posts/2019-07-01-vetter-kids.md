@@ -1,5 +1,6 @@
 ---
 layout: custom-page
+permalink: /vetterkids/
 title: Vetter Kids
 sub_heading: Texas Inspired Doom-Grunge
 date: 2019-07-01 00:00:00 -0500

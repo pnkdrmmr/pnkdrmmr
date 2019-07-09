@@ -1,24 +1,86 @@
 ---
 layout: default
 ---
+
+{% assign html = true %}
+{% comment %}{% include global/output.html %}{% endcomment %}
+
 {% comment %}
 	This layout is used to by posts.md to display all of documents in
 	the _posts/ collection
 {% endcomment %}
 
-{% include breadcrumbs.html class="content-narrow" %}
+{% comment %}{% include breadcrumbs.html class="content-narrow" %}{% endcomment %}
 
-{% for post in site.posts %}
-<div class="container pure-g">
-  <div class="pure-u-1">
-      <div class="content content-narrow">
-        <div class="list-layout">
-          <h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
-          <div>{{ post.content | truncatewords: 30 }}</div>
-          <date>{{ post.date | date_to_string }}</date>
-        </div>
-      </div>
-    </div>
-  </div>
+
+<div class="posts gradient-bg">
+	<div class="page-width">
+		<section class="section-title">
+			<h1>{{page.title}}</h1>
+		</section>
+		<div class="grid vert-top text-center">
+			{% for post in site.posts %}
+
+				{% if post.blocks[0].image %}
+					{% assign artImg = post.blocks[0].image %}
+				{% elsif post.blocks[1].image %}
+					{% assign artImg = post.blocks[1].image %}
+				{% elsif post.blocks[2].image %}
+					{% assign artImg = post.blocks[2].image %}
+				{% endif %}
+
+				{% assign url = post.url %}
+				{% if post.permalink %}
+					{% assign url = post.permalink %}
+				{% endif %}
+
+				<div class="grid__item medium--one-third large-up--one-quarter text-left">
+					{% comment %}<div>{{post.blocks.first.image | jsonify | strip_html | replace: "'", '&apos;' | replace: '\n', '' | replace: '\"', ''}}</div>{% endcomment %}
+					{% comment %}{% assign pageData = post | jsonify | strip_html | replace: "'", '&apos;' | replace: '\n', '' | replace: '\"', '' %}
+					{% if html == true %}
+						<div class="jsonContainer">
+							<pre id="json{{forloop.index}}" style="">
+								{{pageData}}
+							</pre>
+						</div>
+						<style type="text/css">
+							.jsonContainer {
+								padding:1em 3em;
+								background:rgb(200,200,200);
+								color:black;
+								background:rgb(10,10,10);
+								color:white;
+								font-size: 17px;
+
+							}
+							#json{{forloop.index}} {
+								max-height: 600px;
+								overflow: auto;
+							}
+						</style>
+					{% endif %}
+					<script type="text/javascript">
+						var data{{forloop.index}} = '{{ pageData }}';
+						var data{{forloop.index}}String = JSON.parse(data{{forloop.index}});
+						var data{{forloop.index}}String = JSON.stringify(data{{forloop.index}}String, null, 2);
+						// var data{{forloop.index}}String = data{{forloop.index}}String.replace(/"(\w+)"\s*:/g, '$1:');
+						{% if html == true %}
+							document.getElementById("json{{forloop.index}}").innerHTML = data{{forloop.index}}String;
+						{% endif %}
+						{% if log == true %}
+							console.log(data{{forloop.index}}String)
+						{% endif %}
+					</script>{% endcomment %}
+					<a href="{{ url }}" class="post-item">
+						<div class="bg_image squared" style="background-image: url({{artImg}});"></div>
+						<div class="item-meta">
+							<h3>{{post.title}}</h3>
+							<span>{{post.date | date_to_string}}</span>
+						</div>
+					</a>
+				</div>
+
+			{% endfor %}
+		</div>
+	</div>
 </div>
-{% endfor %}

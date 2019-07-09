@@ -107,6 +107,35 @@ body.locked {
 	}
 }
 
+.section-title {
+	padding: 1em 0;
+	margin:0;
+	width: 100%;
+	text-align: center;
+
+	h1, h2 {
+		margin:0; 
+		font-family: $headlineFont;
+		color: black;
+	}
+	h1 {
+		font-size: 3.5em;
+	}
+	h2 {
+		font-size: 2em;
+	}
+
+	@include media-query($medium-up) {
+		padding: 2em 0;
+		h1 {
+			font-size: 7em;
+		}
+		h2 {
+			font-size: 4em;
+		}
+	}
+}
+
 
 .video-ratio {
 	width: 100%;

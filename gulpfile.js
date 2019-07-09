@@ -47,8 +47,8 @@ var jsFiles = [
 gulp.task('jekyll', () => {
   var jekyll = child.spawn('jekyll', ['build',
     '--watch',
-    '--incremental',
-    '--drafts'
+    // '--incremental',
+    // '--drafts'
   ]);
   var jekyllLogger = (buffer) => {
     buffer.toString()

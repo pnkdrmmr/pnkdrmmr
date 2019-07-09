@@ -52,6 +52,7 @@
 		img {
 			position: relative;
 			z-index: 1;
+			width: 100%;
 		}
 
 		.center-content {
@@ -177,6 +178,24 @@
 	@media screen and (min-width: $grid-medium) {
 		.post-title {
 			font-size: 4.25em;
+		}
+	}
+
+	@include media-query($small) {
+		.page-width {
+			display: flex;
+			align-items: flex-end;
+		}
+		.center-content {
+			position: relative;
+			padding: 0;
+			width: 95%;
+			margin: 0 auto 2em;
+			top:initial;
+			left:initial;
+			right:initial;
+			bottom:initial;
+			transform: none;
 		}
 	}
 }

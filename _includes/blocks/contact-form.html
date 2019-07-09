@@ -1,0 +1,75 @@
+{% assign s = section %}
+{% capture class %}{{s.template}}-{{forloop.index}}{% endcapture %}
+{% capture sectionID %}section-{{class}}{% endcapture %}
+<!-- includes/{{s.block}} -->
+{% assign imgs 		= s.slices %}
+{% assign allBgs 	= '' %}
+{% assign custom 	= s.custom_css | raw %}
+{% assign cssClass	= class | prepend: '.' %}
+{% assign cssLoop 	= custom | replace: '==', cssClass | replace: ';', ' !important;' %}
+<div 
+	class="slides {{class}}" id="{{sectionID}}">
+	
+	<style type="text/css">
+		{{allBgs}}
+		
+		{{cssLoop}}
+	</style>
+</div>
+
+<!-- includes/block-cta-bar -->
+{% assign block_id = '' %}
+{% capture block_id %}block-{{ section.background_image | replace: '/','' | replace: '.','' }}{% endcapture %}
+{% capture contact-form %}
+	<form class="" action="https://formspree.io/{{ section.email_recipient }}" method="POST">
+		<div class="input-group">
+			<input name="Name" id="Name" type="text" class="">
+			<label for="Name">Name</label>
+		</div>
+		<div class="input-group">
+			<input name="Email" id="email" type="email" class="">
+			<label for="email">Email</label>
+		</div>
+		<div class="input-group">
+			<input name="Subject" id="Subject" type="text" class="">
+			<label for="Subject">Subject</label>
+		</div>
+		<div class="input-group">
+			<textarea name="Message" id="Message" class=""></textarea>
+			<label for="Message">Message</label>
+		</div>
+		<div class="btn-container">
+			<button type="submit" class="btn button primary inverted">Sign up</button>
+		</div>
+	</form>
+{% endcapture %}
+<section 
+	class="section-slide hero contact background-image {{ block_id }}">
+	<div class="container">
+		<div class="grid_no_gutter">
+			<div class="grid__item small--hide medium--hide large-up--one-quarter">
+				<span style="opacity: 0; pointer-events: none; display: block;">spacer</span>
+			</div>
+			<div class="grid__item small--hide medium--one-half large-up--one-half text-center background-color">
+				<span style="opacity: 0; pointer-events: none; display: block;">spacer</span>
+				<div class="content ">
+					{{ contact-form }}
+				</div>
+			</div>
+			<div class="grid__item medium--one-half large-up--one-quarter text-center medium-up--text-right">
+				<span style="opacity: 0; pointer-events: none; display: block;">spacer</span>
+				<div class="content">
+					<h2 class="h1">{{ section.headline | strip_html }}</h2>
+					<p>{{ section.content }}</p>
+					{% if section.cta and section.cta.enabled == true %}
+						<a class="btn" href="{{ section.cta.url }}">{{ section.cta.button_text }}</a>
+					{% endif %}
+					<div class="medium-up--hide">
+						{{ contact-form }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>
