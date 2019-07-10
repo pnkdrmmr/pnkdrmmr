@@ -106,17 +106,16 @@ blocks:
     medium_horizontal_align: Left
     small_horizontal_align: Left
   assign_to_group: Main Group
-  text: <p><br>What's Spanish for "I know you speak English?" Army had half a day.
-    Say goodbye to these, because it's the last time! Not tricks, Michael, illusions.
-    I'm half machine. I'm a monster. Marry me. There's only one man I've ever called
-    a coward, and that's Brian Doyle Murray. No, what I'm calling you is a television
-    actor. I hear the jury's still out on science. It's a hug, Michael. I'm hugging
-    you.</p><p>Now, when you do this without getting punched in the chest, you'll
-    have more fun. Army had half a day. Michael! Michael! He'll want to use your yacht,
-    and I don't want this thing smelling like fish. I'm a monster. Oh, you're gonna
-    be in a coma, all right. Did you enjoy your meal, Mom? You drank it fast enough.
-    That's what it said on 'Ask Jeeves.'</p>
-  title: It started as a screenname
+  text: <p>My name is Austin. <br>I'm from Baton Rouge, Louisiana but live in Austin,
+    Texas. <br>I've been a musician for over two thirds of my life.</p><p>I love finding
+    the pocket. Cool tricks are cool tricks, but a landing a perfect kickflip is a
+    little useless when you can't steer the board. As my longtime username implies,
+    my background is in punk music but I'm comfortable in Rock, Hip Hop, Metal, Indie,
+    Blues, other experimental shoegazey minimalist styles, and I'm always willing
+    to try something new. </p><p>Unfortunately, despite being from Louisiana, I've
+    never had an ear for jazz. Go figure. </p><p>You can check out some of my work
+    on the <a href="/bands" title="">Bands</a> page. Hire me and let's make music.</p>
+  title: ''
   button_text: ''
   button_url: ''
   custom_css: ''
@@ -229,3 +228,30 @@ menu:
     weight: 2
 
 ---
+### The TL;DR
+
+My name is Austin.   
+I'm from Baton Rouge, Louisiana but live in Austin, Texas.   
+I've been a musician for over two thirds of my life.
+
+I love finding the pocket. Cool tricks are cool tricks, but a landing a perfect kickflip is a little useless when you can't steer the board. As my longtime username implies, my background is in punk music but I'm comfortable in Rock, Hip Hop, Metal, Indie, Blues, other experimental shoegazey minimalist styles, and I'm always willing to try something new. 
+
+Unfortunately, despite being from Louisiana, I've never had an ear for jazz. Go figure. 
+
+You can check out some of my work on the [Bands](/bands) page. Hire me and let's make music.
+
+### Early Start
+
+My band director in middle school was Mr. Tullos. He and my dad had been friends in the LSU Marching band together so I was allowed to borrow the school's spare drumset over the summer after 6th grade. Blue 70's Ludwig Vistlites with a seam crack on every drum at least an inch wide. Sounded like literal tin cans and I absolutely loved them. I eventually had to return the borrowed set and got my first starter set. I stayed in Jazz band for the rest of middle school and took some lessons from legendary Baton Rouge drummer, Herman Jackson; but that was the extent of my formal study. What can I say, I've always drifted towards self-direction. 
+
+I found teachers in every new artist I could find; since the internet had just happened I felt like there was an endless chasm to choose from. I would spend hours tying up the home landline inhaling videos on DRUMMERWORLD (and maybe a certain early music sharing platform). I liked any thing I could find from Jamiroquai to Thrice then The Toasters and back; but probably my biggest early influence on drums was Vinnie Paul and Pantera. They were the first band I remember wanting to see so I sooort of tricked my poor Mom into taking me to see them when I was 13. I would play along to the 101 Proof Live album on repeat just trying to almost mimic some of what Vinnie did. I'd bet that he's the source of my eternal quest for the pocket.
+
+### Life in Bands
+
+In high school, I found a home in the local all-ages DIY scene. I got to see what the ground-level of being in a band looked like. Ska hadn't died yet but the screamo / post-hardcore kids had moved in so it was always a really strange mix of bands. I started a band with some friends in the 10th grade and though this band never did anything but practice it launched me into my first gig. At some point our 4-track demo was passed to a local rising band, who let me audition when their drummer left. 
+
+Stanley's Car managed to mix 3rd-wave Less than Jake style ska with Megadeth. At 17 I was playing shows with  them almost every weekend; I even did a bar gig on school night once and felt like literally the coolest person in school the next day. I also joined a punk group called Outline when they needed a fill in drummer for a show. After a little over a year in those two groups, I was asked to audition for The Planning Fallacy. 
+
+As a side note: both I and anyone in that scene should be legally barred in old age from commenting on what "these kids these days" are wearing due to the fashion travesties we committed between 2001 and 2008. 
+
+I don't have a particular preference on whether Click is Law or not, but I'm happy to use it either in the Studio or On Stage if the project requires it. 
