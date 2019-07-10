@@ -191,7 +191,15 @@ blocks:
   title: ''
   button_text: ''
   button_url: ''
-  custom_css: ''
+  custom_css: |-
+    == h2 {
+    margin: 0 0 5px;
+    }
+    @media screen and (min-width: 990px) {
+    == {
+    font-size: 1.25em;
+    }
+    }
 - template: block-gallery
   block: blocks/gallery
   widths:
