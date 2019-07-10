@@ -180,14 +180,14 @@ blocks:
     medium_horizontal_align: Left
     small_horizontal_align: Left
   assign_to_group: Main Group
-  text: <h3>Drums</h3><p>DW Custom Set:<br>- 20"x18" Kick<br>- 12"x8" rack, 16"x13"
-    &amp; 18"x14" floors<br>- 14"x7" Edge Snare<br>- Maple VLT Shells<br>- Tobacco
-    Brown Laqcuer, Snare is Natural</p><p>Cymbals:<br>- 15"Meinl Classics Custom Dark
-    Hi-hats<br>- 18" &amp; 20"Meinl Classics Custom Dark Crashes<br>- 22" Meinl Classics
-    Custom Dark Ride<br>- 16" Classics Custom brilliant trash crash<br>- Ching Ring</p><p>Hardware:<br>-
+  text: <h2>DW Custom Set</h2><p>- 20"x18" Kick<br>- 12"x8" rack, 16"x13" &amp; 18"x14"
+    floors<br>- 14"x7" Edge Snare<br>- Maple VLT Shells<br>- Tobacco Brown Laqcuer,
+    Snare is Natural</p><h2>Cymbals</h2><p>- 15"Meinl Classics Custom Dark Hi-hats<br>-
+    18" &amp; 20"Meinl Classics Custom Dark Crashes<br>- 22" Meinl Classics Custom
+    Dark Ride<br>- 16" Classics Custom brilliant trash crash<br>- Ching Ring</p><h2>Hardware</h2><p>-
     DW 9000 Double Bass Pedal<br>- DW 9500TB 2-Leg Hi-hat<br>- DW 9700 Straight/Boom
     Stand x4<br>- DW 9900 Heavy-Duty Double Tom Stand<br>- Roc-n-Soc Hydralic Throne
-    w/ backrest</p>
+    w/ backrest</p><p></p>
   title: ''
   button_text: ''
   button_url: ''
