@@ -184,7 +184,10 @@ blocks:
     &amp; 18"x14" floors<br>- 14"x7" Edge Snare<br>- Maple VLT Shells<br>- Tobacco
     Brown Laqcuer, Snare is Natural</p><p>Cymbals:<br>- 15"Meinl Classics Custom Dark
     Hi-hats<br>- 18" &amp; 20"Meinl Classics Custom Dark Crashes<br>- 22" Meinl Classics
-    Custom Dark Ride<br>- 16" Classics Custom brilliant trash crash<br>- Ching Ring</p>
+    Custom Dark Ride<br>- 16" Classics Custom brilliant trash crash<br>- Ching Ring</p><p>Hardware:<br>-
+    DW 9000 Double Bass Pedal<br>- DW 9500TB 2-Leg Hi-hat<br>- DW 9700 Straight/Boom
+    Stand x4<br>- DW 9900 Heavy-Duty Double Tom Stand<br>- Roc-n-Soc Hydralic Throne
+    w/ backrest</p>
   title: ''
   button_text: ''
   button_url: ''
