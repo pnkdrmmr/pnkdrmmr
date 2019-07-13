@@ -39,7 +39,11 @@ blocks:
   default_max-width: true
   no_gutter: false
   custom_max-width: ''
-  custom_css: ''
+  custom_css: |-
+    == .slide img {
+    max-width:450px;
+    margin:2em auto;
+    }
 - template: slider
   block: blocks/slider
   widths:
