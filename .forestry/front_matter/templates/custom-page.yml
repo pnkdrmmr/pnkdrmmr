@@ -15,6 +15,9 @@ fields:
   name: date
   label: date
   default: ''
+- name: show_date
+  type: boolean
+  label: Show Date
 - name: blocks
   type: blocks
   label: Blocks
