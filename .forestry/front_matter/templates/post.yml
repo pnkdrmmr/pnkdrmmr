@@ -22,6 +22,9 @@ fields:
   type: datetime
   hidden: false
   default: ''
+- name: show_date
+  type: boolean
+  label: Show Date
 - name: tags
   label: Tags
   type: tag_list
