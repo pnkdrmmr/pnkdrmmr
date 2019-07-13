@@ -1,9 +1,9 @@
 ---
 layout: custom-page
-permalink: /vetterkids/
+permalink: "/vetterkids/"
 title: Vetter Kids
 sub_heading: Texas Inspired Doom-Grunge
-date: 2019-07-01 00:00:00 -0500
+date: 2019-07-01T05:00:00.000+00:00
 tags:
 - EPs
 - Band
@@ -40,38 +40,57 @@ blocks:
   no_gutter: false
   custom_max-width: ''
   custom_css: ''
+- template: slider
+  block: blocks/slider
+  widths:
+    large_width: 50% (1/2)
+    medium_width: 33% (1/3)
+    small_width: 100%
+  assign_to_group: Main Group
+  image:
+  - main_image: "/uploads/2019/07/v600_vetterkidsalbumcoversmall.jpg"
+    custom_css: ''
+    text_color: "#FFFFFF"
+    overlay_color: "#000000"
 - template: block-text
   block: blocks/text
   widths:
     large_width: 50% (1/2)
     large_horizontal_align: Left
-    medium_width: 40% (4/10)
+    medium_width: 66% (2/3)
     medium_horizontal_align: Left
     small_width: 100%
     small_horizontal_align: Left
-    hide_large: false
-    hide_medium: false
-    hide_small: false
+  text: "<p>Recorded by Chris in San Antonio, TX in 2014</p><p>Marcos - Guitar, Vocals/<br>Richard
+    - Lead Bass, Vocals<br>Austin - Drums, Vocals</p>"
+  title: III - Vetter Kids
   assign_to_group: Main Group
-  title: these dudes
-  text: ''
-  button_text: ''
-  button_url: ''
-  custom_css: ''
-- template: block-content
-  block: blocks/content
+- template: slider
+  block: blocks/slider
+  widths:
+    large_width: 50% (1/2)
+    medium_width: 33% (1/3)
+    small_width: 100%
+  assign_to_group: Main Group
+  image:
+  - main_image: "/uploads/2019/07/cd_finalsmall.jpg"
+    custom_css: ''
+    text_color: "#FFFFFF"
+    overlay_color: "#000000"
+- template: block-text
+  block: blocks/text
   widths:
     large_width: 50% (1/2)
     large_horizontal_align: Left
-    medium_width: 60% (6/10)
+    medium_width: 66% (2/3)
     medium_horizontal_align: Left
     small_width: 100%
     small_horizontal_align: Left
-    hide_large: false
-    hide_medium: false
-    hide_small: false
   assign_to_group: Main Group
-  custom_css: ''
+  text: "<p>Recorded By Fred Weaver at Apocalypse the Apocalypse in Clearfield, PA
+    in 2014</p><p>Marcos - Guitar, Vocals/<br>Richard - Lead Bass, Vocals<br>Austin
+    - Drums, Vocals</p>"
+  title: Logan - Vetter Kids
 related_posts: []
 
 ---
